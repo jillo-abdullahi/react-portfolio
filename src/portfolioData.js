@@ -60,7 +60,7 @@ const portfolioData = {
     socialLinks : {
                 github: "https://github.com/jillo-abdullahi",
                 linkedIn: "https://www.linkedin.com/in/jilloabdullahi/",
-                resume: "https://drive.google.com/file/d/1A7Umu9Y-Ahk0qz-Zw9YeZCZkXnJyEIzy/view?usp=sharing"
+                resume: "https://drive.google.com/file/d/1ZF1SMpfgo0Z7q6wZ13POSeh5FZDzWb_Z/view?usp=sharing"
             }
 }
 

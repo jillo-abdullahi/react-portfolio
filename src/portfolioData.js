@@ -12,12 +12,12 @@ const portfolioData = {
         },
         {
             id: "6",
-            name: "mario plan",
-            icon: "images/mario-plan.gif",
-            url: "https://marioplan-f930a.firebaseapp.com/",
-            source: "https://github.com/jillo-abdullahi/marioplan",
-            description: "An app for managing your projects and tracking notifications.",
-            stacks : ['React', 'Redux', 'CSS', 'Firestore'],
+            name: "CN Jokes",
+            icon: "images/cn-jokes.gif",
+            url: "http://cn-jokes.s3-website.us-east-2.amazonaws.com",
+            source: "https://github.com/jillo-abdullahi/chuck-norris-jokes",
+            description: "A web app with lots of Chuck Norris jokes to brighten your day :-)",
+            stacks : ['React', 'Redux', 'AWS S3', 'ICDN.com API'],
         },
         {
             id: "3",

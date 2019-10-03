@@ -23,6 +23,7 @@ const portfolioData = {
             id: "3",
             name: "stackoverflow lite api",
             icon: "images/stackoverflow-lite.gif",
+            url: "https://stackoverflowlite-api.herokuapp.com/",
             source: "https://github.com/jillo-abdullahi/stackoverflow-lite-api",
             description: "An API where people can ask questions and provide answers.",
             stacks : ['Python', 'Flask', 'Swagger', 'Heroku'],

@@ -12,11 +12,11 @@
 /build
 
 # firebase
-/src/config
-firebase.*
-firestore.*
-.firebaserc
-.firebase/
+# /src/config
+# firebase.*
+# firestore.*
+# .firebaserc
+# .firebase/
 
 # misc
 .DS_Store

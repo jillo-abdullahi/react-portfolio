@@ -3,4 +3,5 @@ My React Portfolio
 ## Built With:
 
 1. ReactJS
-2. Ice-cold soda ;-)
+2. Materialize
+3. Firebase

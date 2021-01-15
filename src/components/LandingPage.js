@@ -4,8 +4,8 @@ import ProjectCard from "./ProjectCard";
 import portfolioData from "../portfolioData";
 import ContactForm from "./ContactForm";
 import ContactLinks from "./ContactLinks";
-import ProfileImage from "../static/images/me.png";
-import YTLogo from "../static/images/logo_solid.png";
+import ProfileImage from "../static/images/me.webp";
+import YTLogo from "../static/images/channelLogo.webp";
 
 const LandingPage = () => {
   const topProjects = portfolioData.topProjects;
@@ -63,7 +63,7 @@ const LandingPage = () => {
           <h4>my name is</h4>
           <h3>Jillo Woche</h3>
           <hr className="landing-divider" />
-          <span>Web Developer &#183; Tech Youtuber</span>
+          <span>Front-end Developer &#183; Tech Youtuber</span>
         </div>
         <div className="header-buttons">
           <div className="row">
@@ -72,7 +72,7 @@ const LandingPage = () => {
                 href="#portfolio-section"
                 className="landing-btn waves-effect waves-light btn-small"
               >
-                view projects
+                projects
               </a>
             </div>
             <div className="col s12 m6 yt-btn-section">
@@ -80,7 +80,7 @@ const LandingPage = () => {
                 href="#youtube-section"
                 className="landing-btn waves-effect waves-light btn-small"
               >
-                view yt channel
+                youtube
               </a>
             </div>
           </div>
@@ -197,31 +197,22 @@ const LandingPage = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src={YTLogo} alt="yt-logo" />
+                    <img className="img-responsive" src={YTLogo} alt="yt-logo" />
                   </a>
                 </div>
                 <div className="yt-description">
                   <p>
-                    Aloha! I upload tech reviews, tech tutorials, and explain
-                    tech concepts on my Youtube channel, Gadgetopia. There is
+                    I upload tech review videos, tech tutorials, and explain
+                    tech concepts on my Youtube channel, Gadgetopia. We're talking
                     the bleeding edge of tech from 8K OLED TVs to self-lacing
-                    shoes. Then there is the simple gadgets we use on a daily
+                    shoes and the simple gadgets we use on a daily
                     basis that make our lives so much easier. Welcome aboard and
-                    let's explore all these together.
+                    let's explore!
                   </p>
                   <p>
-                    Please like my{" "}
-                    <a
-                      href="https://www.facebook.com/Gadgetopia-100697095003602"
-                      className="p-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Facebook page
-                    </a>{" "}
-                    to receive updates. Join me for quality tech videos by
+                    Join me for quality tech videos by
                     smashing the subscribe button below. Don't forget to hit
-                    that bell icon to receive a notification whenever fresh new
+                    that bell icon for notifications whenever fresh
                     content drops.
                   </p>
                 </div>

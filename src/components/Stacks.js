@@ -17,7 +17,7 @@ const Stacks = () => {
             <span className="heading-tertiary">front-end</span>
             <ul>
               <li>React &bull; Redux</li>
-              <li>Angular</li>
+              <li>Jest</li>
               <li>HTML5 &bull; CSS3</li>
             </ul>
           </div>

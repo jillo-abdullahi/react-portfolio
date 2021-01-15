@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 
 body {
-  font-family: "Oswald", "Lato", sans-serif;
+  font-family: "Rubik", "Oswald", "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -24,7 +25,7 @@ header {
   color: white;
   height: 100vh;
   background-color: #455a64;
-  background: url("./static/images/portfolio-landing.png") no-repeat center
+  background: url("./static/images/portfolio-landing.webp") no-repeat center
     center;
   background-size: cover;
 }
@@ -50,10 +51,10 @@ header {
 
 .header-title h3 {
   color: #e7a11a;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   margin: 7px 0 0 0;
-  font-size: 7vh;
+  font-size: 6vh;
 }
 .header-title h4 {
   text-transform: uppercase;
@@ -63,9 +64,10 @@ header {
   margin: 10px 0 0 0;
 }
 .header-title span {
-  font-size: 3vh;
+  font-size: 2.7vh;
   text-transform: uppercase;
   font-weight: 400;
+  padding: 0 10px;
 }
 
 .profile-img img {
@@ -76,21 +78,22 @@ header {
   border: 2.5px solid #e7a11a;
 }
 .landing-divider {
-  width: 33vh;
+  width: 40vh;
   background-color: #e7a11a;
   border-color: #e7a11a;
 }
 
 .landing-btn {
   background-color: #e7a11a;
-  font-size: 1rem;
+  font-size: .8rem;
   color: #2f3847;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 header .landing-btn {
-  width: 145px;
+  width: 160px;
   animation: header 3s;
+  font-size: 16px;
 }
 
 .landing-btn:hover,
@@ -144,14 +147,14 @@ header .landing-btn {
 }
 .navigation-link {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   text-transform: uppercase;
   color: #fff;
 }
 
 @media (max-width: 430px) {
   .navigation-link {
-    font-size: 13px;
+    font-size: 10px;
   }
 }
 
@@ -214,6 +217,10 @@ header .landing-btn {
   text-decoration: underline;
 }
 
+.yt-buttons .landing-btn {
+  font-size: 1rem;
+}
+
 /*==========stacks section =====*/
 
 #stacks-section {
@@ -245,13 +252,17 @@ header .landing-btn {
   transition: transform 0.3s;
 }
 
+.stack-box ul li {
+  font-size: 15px;
+}
+
 .stack-box:hover {
   transform: translateY(-2px);
 }
 
 .heading-tertiary {
   display: block;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   text-transform: uppercase;
   margin-top: 7px;
@@ -334,7 +345,7 @@ header .landing-btn {
 }
 
 .project-heading {
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 400;
   text-transform: uppercase;
   text-align: right;
@@ -362,7 +373,7 @@ header .landing-btn {
 }
 
 .project-details li {
-  font-size: 1.2rem;
+  font-size: 16px;
   padding: 0.5rem;
   color: #2f3847;
 }
@@ -405,7 +416,7 @@ header .landing-btn {
 .project-desc-mobile {
   margin-top: 10px;
   color: #2f3847;
-  font-size: 18px;
+  font-size: 16px;
   padding: 0 10px;
 }
 
@@ -413,13 +424,17 @@ header .landing-btn {
   margin-top: 10px;
   color: #e7a11a;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .portfolio-buttons-mobile {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin-top: 10px;
+}
+
+.portfolio-buttons-mobile .landing-btn {
+  margin: 5px;
 }
 
 @media (max-width: 374px) {
@@ -468,6 +483,7 @@ header .landing-btn {
     padding: 0 3rem;
   }
 
+
   .flip {
     width: 75vw;
   }
@@ -490,9 +506,7 @@ header .landing-btn {
 #youtube-section {
   padding-top: 10px;
   padding-bottom: 20px;
-  background: url("./static/images/background-plain.png") no-repeat center
-    center;
-  background-size: cover;
+  background: url("./static/images/email-pattern.png");
 }
 
 #youtube-section .content {
@@ -509,10 +523,21 @@ header .landing-btn {
   line-height: 20px;
 }
 
+.yt-logo {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .yt-logo,
+  .yt-buttons {
+    text-align: center;
+  }
+}
 .yt-logo img {
-  width: 22vh;
-  height: 22vh;
-  border-radius: 50%;
+  width: 30vh;
+  border: 2px solid gray;
+  border-radius: 5px;
 }
 
 i.right {
@@ -552,7 +577,7 @@ i.right {
 /* ============ contact section =========== */
 .contact {
   color: #bdbdbd;
-  background: url("./static/images/footer-background.png") no-repeat center
+  background: url("./static/images/footer-background.webp") no-repeat center
     center;
   background-size: cover;
 }
@@ -577,7 +602,7 @@ i.right {
 .secondary-heading-small {
   text-transform: uppercase;
   color: #e7a11a;
-  font-size: 3vh;
+  font-size: 2.5vh;
 }
 
 input,
@@ -613,7 +638,6 @@ button[type="submit"]:focus {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 .portfolio-image img {
@@ -628,7 +652,7 @@ button[type="submit"]:focus {
   margin-top: 15px;
   margin-bottom: 1em;
   padding: 13px;
-  width: 340px;
+  width: auto;
 }
 
 .profile-link {
@@ -637,6 +661,11 @@ button[type="submit"]:focus {
   padding: 5px;
   border-radius: 5px;
   transition: all 0.5s ease-in-out;
+}
+
+.social-link {
+  text-align: center;
+  margin-top: 15px;
 }
 
 .profile-link:hover {
@@ -674,16 +703,6 @@ toast-details {
     border-top: 2px solid #e7a11a;
     margin-top: 15px;
     padding-top: 10px;
-    width: 280px;
-  }
-
-  .profile-link {
-    border: 1px solid #e7a11a;
-    padding: 4px;
-    font-size: 0.9rem;
-    border-radius: 3px;
-    background: #e7a11a;
-    color: #2f3847;
   }
 }
 

@@ -62,7 +62,9 @@ const portfolioData = {
                 github: "https://github.com/jillo-abdullahi",
                 linkedIn: "https://www.linkedin.com/in/jilloabdullahi/",
                 resume: "https://drive.google.com/file/d/1JdngantCJ5_K60eJru1Ariial1U8wJfC/view?usp=sharing",
-                facebook: "https://www.facebook.com/jilloabdullah/"
+                facebook: "https://www.facebook.com/jilloabdullah/",
+                instagram: "https://www.instagram.com/jillo_abdullah/",
+                twitter: "https://twitter.com/jillo_woche"
             }
 }
 

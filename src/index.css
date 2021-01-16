@@ -54,7 +54,7 @@ header {
   font-weight: 500;
   text-transform: uppercase;
   margin: 7px 0 0 0;
-  font-size: 6vh;
+  font-size: 5vh;
 }
 .header-title h4 {
   text-transform: uppercase;
@@ -78,7 +78,7 @@ header {
   border: 2.5px solid #e7a11a;
 }
 .landing-divider {
-  width: 40vh;
+  width: 33vh;
   background-color: #e7a11a;
   border-color: #e7a11a;
 }
@@ -93,7 +93,7 @@ header {
 header .landing-btn {
   width: 160px;
   animation: header 3s;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .landing-btn:hover,
@@ -636,8 +636,10 @@ button[type="submit"]:focus {
 
 .contact-links {
   display: flex;
+  margin-top: 20px;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .portfolio-image img {
@@ -648,29 +650,29 @@ button[type="submit"]:focus {
 }
 
 .links {
+  display: flex;
+  justify-content: center;
   border-top: 2px solid #e7a11a;
   margin-top: 15px;
   margin-bottom: 1em;
   padding: 13px;
-  width: auto;
+  width: fit-content;
 }
 
 .profile-link {
   color: #bdbdbd;
-  border: 2px solid #e7a11a;
   padding: 5px;
-  border-radius: 5px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  margin: 5px;
 }
 
 .social-link {
   text-align: center;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .profile-link:hover {
-  background: #e7a11a;
-  color: #2f3847;
+  color: #e7a11a;
 }
 
 .black-background {

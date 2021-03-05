@@ -113,7 +113,24 @@ header .landing-btn {
   }
   .projects-btn-section a {
     width: 140px;
+    font-size: 12px;
   }
+  .header-title h3 {
+    margin: 7px 0 0 0;
+    font-size: 4vh;
+  }
+  .header-title h4 {
+    font-size: 2vh;
+    margin: 12px 0 0 0;
+  }
+  .header-title span {
+    font-size: 2vh;
+    font-weight: 400;
+  }
+  .landing-divider {
+    width: 26vh;
+  }
+
 }
 .header-navigation {
   display: flex;

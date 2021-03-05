@@ -17,7 +17,7 @@ const Stacks = () => {
             <span className="heading-tertiary">front-end</span>
             <ul>
               <li>React &bull; Redux</li>
-              <li>Jest</li>
+              <li>Bootstrap &bull; Material-UI</li>
               <li>HTML5 &bull; CSS3</li>
             </ul>
           </div>
@@ -27,8 +27,8 @@ const Stacks = () => {
             <FontAwesomeIcon icon={faServer} className="icon" />
             <span className="heading-tertiary">back-end</span>
             <ul>
+              <li>NodeJS</li>
               <li>Python &bull; Django</li>
-              <li>Flask</li>
               <li>GraphQL</li>
             </ul>
           </div>
@@ -49,9 +49,9 @@ const Stacks = () => {
             <FontAwesomeIcon icon={faCloud} className="icon" />
             <span className="heading-tertiary">deployment</span>
             <ul>
-              <li>Heroku</li>
+              <li>AWS</li>
               <li>Firebase</li>
-              <li>Github Pages</li>
+              <li>Heroku</li>
             </ul>
           </div>
         </div>

@@ -12,12 +12,12 @@ const portfolioData = {
         },
         {
             id: "6",
-            name: "CN Jokes",
+            name: "chuck-norris.io",
             icon: "images/cn-jokes.gif",
-            url: "http://cn-jokes.s3-website.us-east-2.amazonaws.com",
-            source: "https://github.com/jillo-abdullahi/chuck-norris-jokes",
-            description: "A web app with lots of Chuck Norris jokes to brighten your day.",
-            stacks : ['React', 'Redux', 'AWS S3', 'ICDN.com API'],
+            url: "https://norris-chuck-sovtech.web.app/",
+            source: "https://github.com/jillo-abdullahi/chucknorris.io",
+            description: "A full stack web app with lots of Chuck Norris jokes to brighten your day.",
+            stacks : ['React', 'Redux', 'Apollo GraphQL', 'NodeJS'],
         },
         {
             id: "3",

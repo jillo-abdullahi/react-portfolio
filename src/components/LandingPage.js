@@ -5,7 +5,6 @@ import portfolioData from "../portfolioData";
 import ContactForm from "./ContactForm";
 import ContactLinks from "./ContactLinks";
 import ProfileImage from "../static/images/me.webp";
-import YTLogo from "../static/images/channelLogo.webp";
 
 const LandingPage = () => {
   const topProjects = portfolioData.topProjects;
@@ -30,7 +29,6 @@ const LandingPage = () => {
     var aboutSection = document.getElementById("about-section");
     var stackSection = document.getElementById("stacks-section");
     var portfolioSection = document.getElementById("portfolio-section");
-    var youtubeSection = document.getElementById("youtube-section");
     var contactSection = document.getElementById("contact-section");
 
     var sticky = header.offsetTop;
@@ -41,14 +39,12 @@ const LandingPage = () => {
         aboutSection.classList.add("header-room");
         stackSection.classList.add("header-room");
         portfolioSection.classList.add("header-room");
-        youtubeSection.classList.add("header-room");
         contactSection.classList.add("header-room");
       } else {
         setStickyHeader(false);
         aboutSection.classList.remove("header-room");
         stackSection.classList.remove("header-room");
         portfolioSection.classList.remove("header-room");
-        youtubeSection.classList.remove("header-room");
         contactSection.classList.remove("header-room");
       }
     }
@@ -63,24 +59,16 @@ const LandingPage = () => {
           <h4>my name is</h4>
           <h3>Jillo Woche</h3>
           <hr className="landing-divider" />
-          <span>Front-end Developer &#183; Tech Youtuber</span>
+          <span>Full Stack Software Engineer</span>
         </div>
         <div className="header-buttons">
           <div className="row">
-            <div className="col s12 m6 projects-btn-section">
+            <div className="col s12 projects-btn-section">
               <a
                 href="#portfolio-section"
                 className="landing-btn waves-effect waves-light btn-small"
               >
-                projects
-              </a>
-            </div>
-            <div className="col s12 m6 yt-btn-section">
-              <a
-                href="#youtube-section"
-                className="landing-btn waves-effect waves-light btn-small"
-              >
-                youtube
+                view projects
               </a>
             </div>
           </div>
@@ -100,22 +88,17 @@ const LandingPage = () => {
               </div>
               <div className="col sm3">
                 <a className="navigation-link" href="#stacks-section">
-                  stacks
+                  my stacks
                 </a>
               </div>
               <div className="col sm3">
                 <a className="navigation-link" href="#portfolio-section">
-                  portfolio
-                </a>
-              </div>
-              <div className="col sm3">
-                <a className="navigation-link" href="#youtube-section">
-                  youtube
+                  my portfolio
                 </a>
               </div>
               <div className="col sm3">
                 <a className="navigation-link" href="#contact-section">
-                  contact
+                  contact me
                 </a>
               </div>
             </div>
@@ -130,7 +113,7 @@ const LandingPage = () => {
           <div className="row">
             <div className="description col s12">
               <p className="paragraph">
-                Hi there! Jillo Woche is a front-end software developer and Tech
+                Hi there! Jillo Woche is a Full Stack Software Engineer and Tech
                 Youtuber at{" "}
                 <a
                   className="p-link"
@@ -181,57 +164,6 @@ const LandingPage = () => {
           <div className="projects row"> {others}</div>
         </div>
       </section>
-      <section id="youtube-section">
-        <div className="heading">
-          <span className="secondary-heading">
-            subscribe to my youtube channel
-          </span>
-        </div>
-        <div className="content">
-          <div className="row">
-            <div className="col s12">
-              <div className="yt-description">
-                <div className="yt-logo">
-                  <a
-                    href="https://www.youtube.com/channel/UCml6W5F8GW1X5y33AG0DfUw/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img className="img-responsive" src={YTLogo} alt="yt-logo" />
-                  </a>
-                </div>
-                <div className="yt-description">
-                  <p>
-                    I upload tech review videos, tech tutorials, and explain
-                    tech concepts on my Youtube channel, Gadgetopia. We're talking
-                    the bleeding edge of tech from 8K OLED TVs to self-lacing
-                    shoes and the simple gadgets we use on a daily
-                    basis that make our lives so much easier. Welcome aboard and
-                    let's explore!
-                  </p>
-                  <p>
-                    Join me for quality tech videos by
-                    smashing the subscribe button below. Don't forget to hit
-                    that bell icon for notifications whenever fresh
-                    content drops.
-                  </p>
-                </div>
-                <div className="yt-buttons">
-                  <a
-                    href="https://www.youtube.com/channel/UCml6W5F8GW1X5y33AG0DfUw/?sub_confirmation=1"
-                    className="landing-btn waves-effect waves-light btn-small"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="large material-icons right">plus_one</i>
-                    subscribe
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <section id="contact-section" className="contact">
         <div className="content">
           <div className="row">
@@ -251,22 +183,17 @@ const LandingPage = () => {
               </div>
               <div className="col sm3">
                 <a className="navigation-link" href="#stacks-section">
-                  stacks
+                  my stacks
                 </a>
               </div>
               <div className="col sm3">
                 <a className="navigation-link" href="#portfolio-section">
-                  portfolio
-                </a>
-              </div>
-              <div className="col sm3">
-                <a className="navigation-link" href="#youtube-section">
-                  youtube
+                  my portfolio
                 </a>
               </div>
               <div className="col sm3">
                 <a className="navigation-link" href="#contact-section">
-                  contact
+                  contact me
                 </a>
               </div>
             </div>

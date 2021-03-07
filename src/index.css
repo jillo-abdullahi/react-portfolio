@@ -642,6 +642,13 @@ button[type="submit"] {
   display: inline-block;
 }
 
+button[type="submit"]:disabled{
+  background: #ebb448!important;
+  color: #fff!important;
+}
+
+
+
 .submit-btn-section {
   text-align: center;
 }

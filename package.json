@@ -8,6 +8,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.11.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "cors": "^2.8.5",
+    "emailjs-com": "^2.6.4",
     "firebase": "^6.6.2",
     "firebase-tools": "^7.6.1",
     "glamor": "^2.20.40",

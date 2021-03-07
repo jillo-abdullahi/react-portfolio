@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane, faSpinner } from "@fortawesome/free-solid-svg-icons";
 import M from "materialize-css";
-import { firebase, db } from "../config/firebaseConfig";
+import emailjs from "emailjs-com";
 
 class ContactForm extends Component {
   initialState = {
@@ -26,6 +26,10 @@ class ContactForm extends Component {
     M.toast({ html: toastHTML });
   };
 
+  componentDidMount() {
+    console.log(process.env);
+  }
+
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
@@ -34,26 +38,33 @@ class ContactForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+    this.setState({
+      loading: true,
+    });
 
-    const sendMail = firebase.functions().httpsCallable("sendMail");
-    sendMail({ details: this.state })
-      .then((res) => {
-        // Send contact details to firestore database
-        this.setState({
-          loading: true,
-        });
-        this.notify("success");
-        db.collection("my-contacts").add({
-          first_name: this.state.first_name,
-          last_name: this.state.last_name,
-          message: this.state.message,
-          email: this.state.email,
-        });
-        this.setState({ ...this.initialState });
-      })
-      .catch((err) => {
-        this.notify("fail");
-      });
+    const {
+      REACT_APP_SERVICE_ID,
+      REACT_APP_TEMPLATE_ID,
+      REACT_APP_USER_ID,
+    } = process.env;
+
+    emailjs
+      .send(
+        REACT_APP_SERVICE_ID,
+        REACT_APP_TEMPLATE_ID,
+        this.state,
+        REACT_APP_USER_ID
+      )
+      .then(
+        (response) => {
+          this.notify("success");
+          this.setState({ ...this.initialState });
+        },
+        (error) => {
+          this.notify("failed");
+          this.setState({ ...this.initialState });
+        }
+      );
   };
 
   render() {
@@ -112,7 +123,11 @@ class ContactForm extends Component {
             </div>
           </div>
           <div className="submit-btn-section row">
-            <button className="btn waves-effect waves-light" type="submit">
+            <button
+              className="btn waves-effect waves-light"
+              type="submit"
+              disabled={this.state.loading}
+            >
               Send&nbsp;
               {this.state.loading ? (
                 <FontAwesomeIcon icon={faSpinner} spin />

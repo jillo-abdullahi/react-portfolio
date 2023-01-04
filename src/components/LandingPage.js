@@ -113,37 +113,32 @@ const LandingPage = () => {
           <div className="row">
             <div className="description col s12">
               <p className="paragraph">
-                Hi there! Jillo Woche is a Full Stack Software Engineer and Tech
-                Youtuber at{" "}
-                <a
-                  className="p-link"
-                  href="https://www.youtube.com/channel/UCml6W5F8GW1X5y33AG0DfUw"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Gadgetopia.
-                </a>{" "}
-                He designs, develops, and maintains software tools and
-                platforms. He is a tenacious self-taught programmer who uses
-                continuous iteration to produce results quickly and continuously
-                improve products. As an agile collaborator, he has worked with
-                several local and remote engineering teams, and always stays
-                attuned to the newest technologies and frameworks.
+                Hello and welcome! My name is Jillo Woche and I am a full stack
+                software engineer with a passion for creating visually stunning
+                and user-friendly web experiences. With over 6 years of
+                experience in the industry, I have honed my skills in both
+                traditional Web2 technologies such as HTML, CSS, JavaScript, and
+                TypeScript, as well as cutting-edge Web3 frameworks like
+                Solidity and Ethereum.
               </p>
+
               <p className="paragraph">
-                When he is not punching in lines of code, he loves making tech
-                Youtube videos for his channel, play console games on his Xbox,
-                listen to{" "}
-                <a
-                  className="p-link"
-                  href="https://open.spotify.com/user/jwoche90?si=uqJQ8K26RhKUDz5Qb66r8A"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  music,
-                </a>{" "}
-                or spend quality time with his awesome family. Oh! Did I mention
-                he is an avid soccer player?
+                I am constantly seeking out new challenges and opportunities to
+                learn and grow as a developer, and have had the privilege of
+                working on a wide range of projects including building
+                responsive websites for small businesses, creating intuitive
+                e-commerce platforms, and developing decentralized applications
+                on the blockchain.
+              </p>
+
+              <p className="paragraph">
+                <p className="paragraph">
+                  On this website, you can explore some of the projects I have
+                  had the opportunity to work on. You can also stay up to date
+                  on my current endeavors and get a sense of my approach to
+                  problem-solving and development. Thank you for visiting, and I
+                  hope you enjoy your time here!
+                </p>
               </p>
             </div>
           </div>

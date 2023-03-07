@@ -126,19 +126,8 @@ const LandingPage = () => {
                 I am constantly seeking out new challenges and opportunities to
                 learn and grow as a developer, and have had the privilege of
                 working on a wide range of projects including building
-                responsive websites for small businesses, creating intuitive
-                e-commerce platforms, and developing decentralized applications
+                responsive websites for businesses and developing decentralized applications
                 on the blockchain.
-              </p>
-
-              <p className="paragraph">
-                <p className="paragraph">
-                  On this website, you can explore some of the projects I have
-                  had the opportunity to work on. You can also stay up to date
-                  on my current endeavors and get a sense of my approach to
-                  problem-solving and development. Thank you for visiting, and I
-                  hope you enjoy your time here!
-                </p>
               </p>
             </div>
           </div>

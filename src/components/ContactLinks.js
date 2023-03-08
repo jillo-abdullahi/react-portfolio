@@ -5,17 +5,21 @@ import {
   faGithub,
   faFacebook,
   faTwitter,
-  faInstagram
+  faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
-const ContactLinks = (props) => {
-  const { linkedIn, github, facebook, instagram, twitter } = props.links;
+const ContactLinks = ({ links, showHeader }) => {
+  const { linkedIn, github, facebook, instagram, twitter } = links;
 
   return (
     <div className="contact-links">
-      <div className="heading">
-        <span className="secondary-heading-small">connect with me online</span>
-      </div>
+      {showHeader && (
+        <div className="heading">
+          <span className="secondary-heading-small">
+            connect with me online
+          </span>
+        </div>
+      )}
       <div className="links">
         <div className="social-link">
           <a
@@ -24,7 +28,7 @@ const ContactLinks = (props) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faGithub} style={{"fontSize":"30px"}}/>
+            <FontAwesomeIcon icon={faGithub} style={{ fontSize: "30px" }} />
           </a>
         </div>
         <div className="social-link">
@@ -34,29 +38,29 @@ const ContactLinks = (props) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faLinkedin} style={{"fontSize":"30px"}}/>
+            <FontAwesomeIcon icon={faLinkedin} style={{ fontSize: "30px" }} />
           </a>
         </div>
-        <div className="social-link">
+        {/* <div className="social-link">
           <a
             className="profile-link"
             href={facebook}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faFacebook} style={{"fontSize":"30px"}}/>
+            <FontAwesomeIcon icon={faFacebook} style={{ fontSize: "30px" }} />
           </a>
-        </div>
-        <div className="social-link">
+        </div> */}
+        {/* <div className="social-link">
           <a
             className="profile-link"
             href={instagram}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faInstagram} style={{"fontSize":"30px"}}/>
+            <FontAwesomeIcon icon={faInstagram} style={{ fontSize: "30px" }} />
           </a>
-        </div>
+        </div> */}
         <div className="social-link">
           <a
             className="profile-link"
@@ -64,7 +68,7 @@ const ContactLinks = (props) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faTwitter} style={{"fontSize":"30px"}} />
+            <FontAwesomeIcon icon={faTwitter} style={{ fontSize: "30px" }} />
           </a>
         </div>
       </div>

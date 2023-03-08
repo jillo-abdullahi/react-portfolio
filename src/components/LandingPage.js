@@ -61,7 +61,10 @@ const LandingPage = () => {
           <hr className="landing-divider" />
           <span>Full Stack Software Engineer</span>
         </div>
-        <div className="header-buttons">
+        <div>
+          <ContactLinks links={portfolioData.socialLinks} showHeader={false} />
+        </div>
+        {/* <div className="header-buttons">
           <div className="row">
             <div className="col s12 projects-btn-section">
               <a
@@ -72,7 +75,7 @@ const LandingPage = () => {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
         <div
           id="header-nav"
           className={
@@ -91,11 +94,11 @@ const LandingPage = () => {
                   my stacks
                 </a>
               </div>
-              <div className="col sm3">
+              {/* <div className="col sm3">
                 <a className="navigation-link" href="#portfolio-section">
                   my portfolio
                 </a>
-              </div>
+              </div> */}
               <div className="col sm3">
                 <a className="navigation-link" href="#contact-section">
                   contact me
@@ -126,8 +129,8 @@ const LandingPage = () => {
                 I am constantly seeking out new challenges and opportunities to
                 learn and grow as a developer, and have had the privilege of
                 working on a wide range of projects including building
-                responsive websites for businesses and developing decentralized applications
-                on the blockchain.
+                responsive websites for businesses and developing decentralized
+                applications on the blockchain.
               </p>
             </div>
           </div>
@@ -139,7 +142,7 @@ const LandingPage = () => {
         </div>
         <Stacks />
       </section>
-      <section id="portfolio-section">
+      {/* <section id="portfolio-section">
         <div className="heading">
           <h2 className="secondary-heading">projects portfolio</h2>
         </div>
@@ -147,13 +150,12 @@ const LandingPage = () => {
           <div className="projects row">{top}</div>
           <div className="projects row"> {others}</div>
         </div>
-      </section>
+      </section> */}
       <section id="contact-section" className="contact">
         <div className="content">
           <div className="row">
             <div className="contacts-content col s12">
               <ContactForm />
-              <ContactLinks links={portfolioData.socialLinks} />
             </div>
           </div>
         </div>

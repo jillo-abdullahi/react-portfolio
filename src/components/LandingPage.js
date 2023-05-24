@@ -52,14 +52,23 @@ const LandingPage = () => {
   return (
     <main>
       <header id="home">
-        <div className="header-title">
-          <div className="profile-img">
-            <img src={ProfileImage} alt="profile" />
+        <div className="flex flex-col space-y-8 items-center header-title">
+          <div className="rounded-full bg-transparent border-8 border-[#E7A11A78]">
+            <div className="profile-img">
+              <img src={ProfileImage} alt="profile" />
+            </div>
           </div>
-          <h4>my name is</h4>
-          <h3>Jillo Woche</h3>
-          <hr className="landing-divider" />
-          <span>Full Stack Software Engineer</span>
+
+          <div className="flex flex-col items-center space-y-2">
+            <span className="font-bold text-2xl uppercase">my name is</span>
+            <span className="uppercase text-5xl text-[#e7a11a] font-bold">
+              Jillo Woche
+            </span>
+            <hr className="landing-divider" />
+            <span className="font-bold pt-2 uppercase text-2xl">
+              Full Stack Software Engineer
+            </span>
+          </div>
         </div>
         <div>
           <ContactLinks links={portfolioData.socialLinks} showHeader={false} />
@@ -91,14 +100,14 @@ const LandingPage = () => {
               </div>
               <div className="col sm3">
                 <a className="navigation-link" href="#stacks-section">
-                  my stacks
+                  Tech Stack
                 </a>
               </div>
-              {/* <div className="col sm3">
+              <div className="col sm3">
                 <a className="navigation-link" href="#portfolio-section">
-                  my portfolio
+                  projects
                 </a>
-              </div> */}
+              </div>
               <div className="col sm3">
                 <a className="navigation-link" href="#contact-section">
                   contact me
@@ -138,19 +147,19 @@ const LandingPage = () => {
       </section>
       <section id="stacks-section">
         <div className="heading">
-          <span className="secondary-heading">stacks i use</span>
+          <span className="secondary-heading">my tech stack</span>
         </div>
         <Stacks />
       </section>
-      {/* <section id="portfolio-section">
+      <section id="portfolio-section">
         <div className="heading">
-          <h2 className="secondary-heading">projects portfolio</h2>
+          <h2 className="secondary-heading">projects</h2>
         </div>
         <div className="content">
           <div className="projects row">{top}</div>
           <div className="projects row"> {others}</div>
         </div>
-      </section> */}
+      </section>
       <section id="contact-section" className="contact">
         <div className="content">
           <div className="row">
@@ -169,7 +178,7 @@ const LandingPage = () => {
               </div>
               <div className="col sm3">
                 <a className="navigation-link" href="#stacks-section">
-                  my stacks
+                  My Tech Stack
                 </a>
               </div>
               <div className="col sm3">

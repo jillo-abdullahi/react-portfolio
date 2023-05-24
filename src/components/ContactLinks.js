@@ -3,9 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLinkedin,
   faGithub,
-  faFacebook,
   faTwitter,
-  faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
 const ContactLinks = ({ links, showHeader }) => {
@@ -41,26 +39,6 @@ const ContactLinks = ({ links, showHeader }) => {
             <FontAwesomeIcon icon={faLinkedin} style={{ fontSize: "30px" }} />
           </a>
         </div>
-        {/* <div className="social-link">
-          <a
-            className="profile-link"
-            href={facebook}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faFacebook} style={{ fontSize: "30px" }} />
-          </a>
-        </div> */}
-        {/* <div className="social-link">
-          <a
-            className="profile-link"
-            href={instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faInstagram} style={{ fontSize: "30px" }} />
-          </a>
-        </div> */}
         <div className="social-link">
           <a
             className="profile-link"

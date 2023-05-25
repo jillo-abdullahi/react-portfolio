@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -150,12 +150,10 @@ header .landing-btn {
   font-weight: 500;
   font-size: 16px;
   text-transform: uppercase;
-  color: #fff;
 }
 
 .navigation-link:hover {
   color: #e7a11a;
-  
 }
 
 @media (max-width: 430px) {
@@ -167,7 +165,6 @@ header .landing-btn {
 /*========= about section========= */
 
 #about-section {
-  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -176,11 +173,20 @@ header .landing-btn {
   padding-bottom: 3rem;
 }
 
-/* @media (max-width: 768px) {
-  #about-section {
-    height: 100vh;
-  }
-} */
+/* default styling for timeline component forces date to have .7 opacity  */
+/* overriding this here  */
+.dateStyle {
+  opacity: 0.9 !important;
+}
+
+.timeLineContent ul > li {
+  list-style: disc!important;
+}
+
+.timeLineContent ul {
+  padding-left: 2rem;
+}
+
 .heading {
   text-align: center;
   padding-top: 1em;
@@ -199,16 +205,6 @@ header .landing-btn {
   text-align: center;
 }
 
-.paragraph {
-  font-size: 18px;
-}
-
-@media (max-width: 320px) {
-  .paragraph {
-    font-size: 13px;
-  }
-}
-
 .p-link {
   color: #e7a11a;
 }
@@ -222,6 +218,10 @@ header .landing-btn {
 
 .yt-buttons .landing-btn {
   font-size: 1rem;
+}
+
+.timelineItem {
+  border-radius: 20px;
 }
 
 /*==========stacks section =====*/

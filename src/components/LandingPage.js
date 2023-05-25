@@ -6,6 +6,7 @@ import ContactForm from "./ContactForm";
 import ContactLinks from "./ContactLinks";
 import ProfileImage from "../static/images/me.webp";
 import { SectionHeading } from "./shared/sectionHeading";
+import { AboutMeTimeline } from "./AboutMeTimeline";
 
 const LandingPage = () => {
   const topProjects = portfolioData.topProjects;
@@ -61,12 +62,14 @@ const LandingPage = () => {
           </div>
 
           <div className="flex flex-col items-center space-y-2">
-            <span className="font-bold text-2xl uppercase">Hello, I am</span>
+            <span className="font-bold text-2xl uppercase text-gray-200">
+              Hello, I am
+            </span>
             <span className="uppercase text-5xl text-[#e7a11a] font-bold">
               Jillo Woche.
             </span>
             <hr className="landing-divider" />
-            <span className="font-bold pt-2 uppercase text-2xl">
+            <span className="font-bold pt-2 uppercase text-2xl text-gray-200">
               Full Stack Software Engineer
             </span>
           </div>
@@ -84,22 +87,34 @@ const LandingPage = () => {
           <div className="nav-nav-content">
             <div className="nav-content row">
               <div className="col sm3">
-                <a className="navigation-link" href="#about-section">
+                <a
+                  className="navigation-link text-gray-200"
+                  href="#about-section"
+                >
                   about me
                 </a>
               </div>
               <div className="col sm3">
-                <a className="navigation-link" href="#stacks-section">
+                <a
+                  className="navigation-link text-gray-200"
+                  href="#stacks-section"
+                >
                   Tech Stack
                 </a>
               </div>
               <div className="col sm3">
-                <a className="navigation-link" href="#portfolio-section">
+                <a
+                  className="navigation-link text-gray-200"
+                  href="#portfolio-section"
+                >
                   projects
                 </a>
               </div>
               <div className="col sm3">
-                <a className="navigation-link" href="#contact-section">
+                <a
+                  className="navigation-link text-gray-200"
+                  href="#contact-section"
+                >
                   contact me
                 </a>
               </div>
@@ -107,28 +122,38 @@ const LandingPage = () => {
           </div>
         </div>
       </header>
-      <section id="about-section">
+      <section id="about-section" className="bg-[#353D45]">
         <div className="mb-6">
           <SectionHeading heading={"About"} subHeading={"me"} />
         </div>
 
         <div className="content">
-          <div className="flex item-center justify-center w-full">
+          <div className="flex flex-col space-y-8 items-center w-full">
             <div className="description w-full max-w-4xl">
-              <p className="paragraph">
+              <p className="text-lg text-gray-200">
                 Hello there! I'm a full-stack software engineer who loves diving
                 into both web2 and web3 technologies. With a passion for
                 problem-solving, I embark on coding adventures to create elegant
                 and efficient solutions.
               </p>
-              <p className="paragraph">
+              <p className="text-lg text-gray-200">
                 My superpower lies in crafting clean, bug-free code that brings
                 ideas to life. I'm always up for a challenge and eager to stay
                 on the cutting edge of technology.
               </p>
-              <p className="paragraph">
+              <p className="text-lg text-gray-200">
                 Let's collaborate and bring digital dreams to reality!
               </p>
+            </div>
+            <div className="flex flex-col space-y-6">
+              <div className="flex flex-col items-center space-y-2">
+                <h3 className="text-orange text-2xl font-semibold">
+                  Education and work experience
+                </h3>
+                <hr className="landing-divider" />
+              </div>
+
+              <AboutMeTimeline />
             </div>
           </div>
         </div>

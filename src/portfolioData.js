@@ -71,3 +71,88 @@ const portfolioData = {
 };
 
 export default portfolioData;
+
+export const experiences = [
+  {
+    type: "work",
+    title: "Full Stack Software Engineer",
+    company: "Syndicate",
+    companyUrl: "https://www.linkedin.com/company/syndicate-protocol/",
+    location: "Global",
+    date: "2021 - 2023",
+    description: [
+      "Developed and maintained complex, scalable web applications using TypeScript, ReactJS, and NextJS.",
+      "Worked closely with designers, product managers, and other engineers to deliver high-quality software solutions.",
+      "Collaborated with other engineers to build reusable components and libraries for future use.",
+      "Interpreted Ethereum smart contracts and integrated Web3 functionality into applications.",
+      "Worked with the team to improve the codebase and overall product quality.",
+    ],
+  },
+  {
+    type: "work",
+    title: "Front-end Software Engineer",
+    company: "Cellulant",
+    companyUrl: "https://www.linkedin.com/company/cellulant/",
+    location: "Nairobi, Kenya",
+    date: "2019 - 2021",
+    description: [
+      "Worked closely with the design team to dramatically improve the accessibility and user-friendliness of applications with React and NextJS.",
+      "Continuously iterated over front-end web apps and used observation tools like Hotjar to significantly improve user payment flows for over 6 payment options.",
+      "Collaborated with the back-end team to build reusable components and libraries for future use.",
+    ],
+  },
+  {
+    type: "work",
+    title: "Full Stack Software Engineer",
+    company: "Andela",
+    companyUrl: "https://www.linkedin.com/company/andela/",
+    location: "Nairobi, Kenya",
+    date: "2018 - 2019",
+    description: [
+      "Collaborated with the design team to quickly and efficiently build front-end apps using ReactJS.",
+      " Collaborated with team members to build and deploy a performant REST API using Python/Django within a month.",
+      "Worked with the team to improve the codebase and overall product quality.",
+    ],
+  },
+  {
+    type: "work",
+    title: "Team Leader",
+    company: "Sama",
+    companyUrl: "https://www.linkedin.com/company/sama-ai/",
+    location: "Nairobi, Kenya",
+    date: "2016 - 2018",
+    description: [
+      "Supervised and coordinated the work efforts of a team of 22 leading to the success of a major pilot project.",
+      "Ensured that the allocated work is done professionally as per the required standards and targets as defined and desired by Sama.",
+      "Ensured that the team is motivated and that the team members are working in harmony.",
+      "Closely worked with the training and quality departments to achieve targeted SLAs.",
+    ],
+  },
+  {
+    type: "work",
+    title: "Quality Analyst",
+    company: "Sama",
+    companyUrl: "https://www.linkedin.com/company/sama-ai/",
+    location: "Nairobi, Kenya",
+    date: "2015 - 2016",
+    description: [
+      "Analyzed the levels of quality of work in the different Sama work streams, measuring compliance against set standards and recommending actions to be taken to improve quality based on assessment findings.",
+      "Assessed agents transactions and adviced on required measures to improve quality.",
+      "compiled and sent reports to the training and quality manager and to other relevant stakeholders and ensured that each work stream is consistently delivering standard work.",
+    ],
+  },
+  {
+    type: "education",
+    title: "Bachelor of Science in Information Technology",
+    company: "Jomo Kenyatta University of Agriculture and Technology",
+    companyUrl: "https://www.linkedin.com/school/jkuat/",
+    location: "Nairobi, Kenya",
+    date: "2012 - 2015",
+    description: [
+      "Comprehensive technology education.",
+      "In-demand Skills.",
+      "Problem solving and innovation.",
+      "Collaboration and communication",
+    ],
+  },
+];

@@ -1,9 +1,9 @@
 export const SectionHeading = ({ heading, subHeading }) => {
   return (
     <div className="flex items-center justify-center">
-      <span className="font-bold text-3xl text-blue">
+      <h2 className="font-bold text-3xl text-gray-200">
         {heading} <span className="text-orange">{subHeading}</span>
-      </span>
+      </h2>
     </div>
   );
 };

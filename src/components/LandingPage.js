@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Stacks from "./Stacks";
 import ProjectCard from "./ProjectCard";
-import portfolioData from "../portfolioData";
+import portfolioData, { externalLinks } from "../portfolioData";
 import ContactForm from "./ContactForm";
 import ContactLinks from "./ContactLinks";
 import ProfileImage from "../static/images/me.webp";
@@ -158,21 +158,45 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
+
       <section id="stacks-section">
-        <div className="heading">
-          <span className="secondary-heading">my tech stack</span>
+        <div className="mb-6">
+          <SectionHeading heading={"My"} subHeading={"tech stack"} />
+        </div>
+        <div className="description w-full max-w-4xl">
+          <p className="text-lg text-gray-200 text-center">
+            I work hard to improve my skills regularly.
+          </p>
         </div>
         <Stacks />
       </section>
-      <section id="portfolio-section">
-        <div className="heading">
-          <h2 className="secondary-heading">projects</h2>
+
+      <section id="portfolio-section" className="bg-[#353D45]">
+        <div className="mb-6">
+          <SectionHeading heading={"Featured"} subHeading={"projects"} />
         </div>
+        <div className="w-full flex items-center justify-center">
+          <div className="description w-full max-w-4xl">
+            <p className="text-lg text-gray-200 text-center">
+              Here are some of my projects. For a full list, please check out my{" "}
+              <a
+                href={externalLinks.repositories}
+                className="text-orange hover:underline"
+                target="_blank"
+              >
+                Github
+              </a>{" "}
+              profile.
+            </p>
+          </div>
+        </div>
+
         <div className="content">
           <div className="projects row">{top}</div>
           <div className="projects row"> {others}</div>
         </div>
       </section>
+
       <section id="contact-section" className="contact">
         <div className="content">
           <div className="row">

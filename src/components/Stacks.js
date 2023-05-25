@@ -52,7 +52,7 @@ const Stacks = () => {
             <FontAwesomeIcon icon={faCloud} className="icon" />
             <span className="heading-tertiary">deployment</span>
             <ul>
-              <li>AWS</li>
+              <li>Docker</li>
               <li>Netlify</li>
               <li>Firebase</li>
               <li>Heroku</li>

@@ -232,7 +232,7 @@ header .landing-btn {
   align-items: center;
   padding: 2vh 0;
   background-attachment: fixed;
-  background: url("./static/images/general-background.png") no-repeat center
+  background: url("./static/images/icon-bg.svg") no-repeat center
     center;
   background-size: cover;
 }
@@ -564,17 +564,6 @@ i.right {
   height: 100%;
   border: 2.5px solid #2f3847;
 }
-
-/* iframe {
-  width: 32vw;
-  border: 2.5px solid #2f3847;
-}
-
-@media(max-width: 768px){
-  iframe {
-    width: 65vw;
-  }
-} */
 
 /* ============ contact section =========== */
 .contact {

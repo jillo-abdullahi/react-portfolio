@@ -5,6 +5,7 @@ import portfolioData from "../portfolioData";
 import ContactForm from "./ContactForm";
 import ContactLinks from "./ContactLinks";
 import ProfileImage from "../static/images/me.webp";
+import { SectionHeading } from "./shared/sectionHeading";
 
 const LandingPage = () => {
   const topProjects = portfolioData.topProjects;
@@ -60,9 +61,9 @@ const LandingPage = () => {
           </div>
 
           <div className="flex flex-col items-center space-y-2">
-            <span className="font-bold text-2xl uppercase">my name is</span>
+            <span className="font-bold text-2xl uppercase">Hello, I am</span>
             <span className="uppercase text-5xl text-[#e7a11a] font-bold">
-              Jillo Woche
+              Jillo Woche.
             </span>
             <hr className="landing-divider" />
             <span className="font-bold pt-2 uppercase text-2xl">
@@ -73,18 +74,7 @@ const LandingPage = () => {
         <div>
           <ContactLinks links={portfolioData.socialLinks} showHeader={false} />
         </div>
-        {/* <div className="header-buttons">
-          <div className="row">
-            <div className="col s12 projects-btn-section">
-              <a
-                href="#portfolio-section"
-                className="landing-btn waves-effect waves-light btn-small"
-              >
-                view projects
-              </a>
-            </div>
-          </div>
-        </div> */}
+
         <div
           id="header-nav"
           className={
@@ -95,7 +85,7 @@ const LandingPage = () => {
             <div className="nav-content row">
               <div className="col sm3">
                 <a className="navigation-link" href="#about-section">
-                  about
+                  about me
                 </a>
               </div>
               <div className="col sm3">
@@ -118,28 +108,26 @@ const LandingPage = () => {
         </div>
       </header>
       <section id="about-section">
-        <div className="heading">
-          <span className="secondary-heading">about me</span>
+        <div className="mb-6">
+          <SectionHeading heading={"About"} subHeading={"me"} />
         </div>
-        <div className="content">
-          <div className="row">
-            <div className="description col s12">
-              <p className="paragraph">
-                Hello and welcome! My name is Jillo Woche and I am a full stack
-                software engineer with a passion for creating visually stunning
-                and user-friendly web experiences. With over 6 years of
-                experience in the industry, I have honed my skills in both
-                traditional Web2 technologies such as HTML, CSS, JavaScript, and
-                TypeScript, as well as cutting-edge Web3 frameworks like
-                Solidity and Ethereum.
-              </p>
 
+        <div className="content">
+          <div className="flex item-center justify-center w-full">
+            <div className="description w-full max-w-4xl">
               <p className="paragraph">
-                I am constantly seeking out new challenges and opportunities to
-                learn and grow as a developer, and have had the privilege of
-                working on a wide range of projects including building
-                responsive websites for businesses and developing decentralized
-                applications on the blockchain.
+                Hello there! I'm a full-stack software engineer who loves diving
+                into both web2 and web3 technologies. With a passion for
+                problem-solving, I embark on coding adventures to create elegant
+                and efficient solutions.
+              </p>
+              <p className="paragraph">
+                My superpower lies in crafting clean, bug-free code that brings
+                ideas to life. I'm always up for a challenge and eager to stay
+                on the cutting edge of technology.
+              </p>
+              <p className="paragraph">
+                Let's collaborate and bring digital dreams to reality!
               </p>
             </div>
           </div>

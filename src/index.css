@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 body {
-  font-family: "League Spartan", sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -153,15 +153,15 @@ header .landing-btn {
   color: #fff;
 }
 
+.navigation-link:hover {
+  color: #e7a11a;
+  
+}
+
 @media (max-width: 430px) {
   .navigation-link {
     font-size: 10px;
   }
-}
-
-.navigation-link:hover {
-  color: #e7a11a;
-  text-decoration: underline;
 }
 
 /*========= about section========= */
@@ -196,7 +196,7 @@ header .landing-btn {
   color: #2f3847;
   width: 82vw;
   margin: 0 auto;
-  text-align: justify;
+  text-align: center;
 }
 
 .paragraph {

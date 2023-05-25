@@ -1,3 +1,9 @@
+import memoryGame from "./static/images/portfolio/memory.png";
+import dictionaryGame from "./static/images/portfolio/dictionary.png";
+import rockPaperScissors from "./static/images/portfolio/rockPaperScissors.png";
+import tlipApi from "./static/images/portfolio/tlip-api.png";
+import tlipWeb from "./static/images/portfolio/tlip.png";
+
 const portfolioData = {
   topProjects: [
     {
@@ -169,7 +175,7 @@ export const portfolioProjects = [
     title: "Memory Game",
     description:
       "A fun memory game where players try to match pairs against each other or against the CPU.",
-    image: "memory.PNG",
+    image: memoryGame,
     preview: "https://memory-game-green-nine.vercel.app/",
     github: "https://github.com/jillo-abdullahi/memory-game",
     stacks: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
@@ -178,8 +184,8 @@ export const portfolioProjects = [
   {
     title: "Supply Chain Management App",
     description:
-      "This is the frontend for a Supply Chain Items applicationv. This application interfaces with a Node.js REST API to perform CRUD operations on supply chain items.",
-    image: "tlip.PNG",
+      "This is the frontend for a Supply Chain Items application. This application interfaces with a Node.js REST API to perform CRUD operations on supply chain items.",
+    image: tlipWeb,
     preview: "https://tlip-frontend.vercel.app/",
     github: "https://github.com/jillo-abdullahi/tlip-frontend",
     stacks: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
@@ -189,7 +195,7 @@ export const portfolioProjects = [
     title: "Supply Chain Management API",
     description:
       "This is a REST API for managing supply chain items and their events using Express.js and PostgreSQL.",
-    image: "tlip-api.PNG",
+    image: tlipApi,
     preview: "https://tlip-api.onrender.com/api-docs/#/",
     github: "https://github.com/jillo-abdullahi/tlip-api",
     stacks: ["NodeJS", "ExpressJS", "PostgreSQL", "Docker"],
@@ -199,7 +205,7 @@ export const portfolioProjects = [
     title: "Dictionary web app solution",
     description:
       "A dictionary web app built with TailwindCSS and Next.js. It uses a free Dictionary API to fetch data for the searched word. It also uses the Web Speech API to play the audio file for the searched word.",
-    image: "dictionary.PNG",
+    image: dictionaryGame,
     preview: "https://dictionary-web-app-ashy.vercel.app/",
     github: "https://github.com/jillo-abdullahi/dictionary-web-app",
     stacks: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
@@ -209,10 +215,41 @@ export const portfolioProjects = [
     title: "Advanced Rock Paper Scissors",
     description:
       "A Rock, Paper, Scissors, Lizard, Spock game you can play against the CPU.",
-    image: "rockPaperScissors.PNG",
+    image: rockPaperScissors,
     preview: "https://advanced-rock-paper-scissors.vercel.app/",
     github: "https://github.com/jillo-abdullahi/advanced-rock-paper-scissors",
     stacks: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
     completed: false,
   },
 ];
+
+export const skills = {
+  backend: [
+    { name: "NodeJS", level: "85%" },
+    { name: "ExpressJS", level: "89%" },
+    { name: "Python - Django", level: "75%" },
+    { name: "GraphQL/REST APIs", level: "90%" },
+    { name: "Solidity", level: "40%" },
+  ],
+  frontend: [
+    { name: "ReactJS", level: "90%" },
+    { name: "JavaScript/TypeScript", level: "90%" },
+    { name: "NextJS", level: "85%" },
+    { name: "HTML/CSS", level: "89%" },
+    { name: "Tailwind CSS", level: "85%" },
+  ],
+  databases: [
+    { name: "PostgreSQL", level: "82%" },
+    { name: "MySQL", level: "75%" },
+    { name: "Google Firestore", level: "80%" },
+    { name: "SQLite", level: "70%" },
+    { name: "MongoDB", level: "60%" },
+  ],
+  devops: [
+    { name: "Docker", level: "80%" },
+    { name: "Firebase", level: "70%" },
+    { name: "Netlify", level: "80%" },
+    { name: "Vercel", level: "80%" },
+    { name: "CircleCI", level: "60%" },
+  ],
+};

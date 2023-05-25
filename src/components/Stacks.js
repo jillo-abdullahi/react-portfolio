@@ -6,58 +6,40 @@ import {
   faCloud,
   faDesktop,
 } from "@fortawesome/free-solid-svg-icons";
+import { skills } from "../portfolioData";
+import { StackCard } from "./shared/stackCard";
 
 const Stacks = () => {
   return (
     <div className="content">
       <div className="row">
         <div className="front-end col s12 m6 l3">
-          <div className="stack-box">
-            <FontAwesomeIcon icon={faDesktop} className="icon" />
-            <span className="heading-tertiary">front-end</span>
-            <ul>
-              <li>React &bull; Redux</li>
-              <li>TypeScript</li>
-              <li>Tailwind &bull; Bootstrap</li>
-              <li>HTML5 &bull; CSS3</li>
-            </ul>
-          </div>
+          <StackCard
+            icon={<FontAwesomeIcon icon={faDesktop} className="icon" />}
+            title="front-end"
+            skills={skills.frontend}
+          />
         </div>
         <div className="back-end col s12 m6 l3">
-          <div className="stack-box">
-            <FontAwesomeIcon icon={faServer} className="icon" />
-            <span className="heading-tertiary">back-end</span>
-            <ul>
-              <li>NodeJS</li>
-              <li>Solidity</li>
-              <li>Python &bull; Django</li>
-              <li>GraphQL</li>
-            </ul>
-          </div>
+          <StackCard
+            icon={<FontAwesomeIcon icon={faServer} className="icon" />}
+            title="back-end"
+            skills={skills.backend}
+          />
         </div>
         <div className="database col s12 m6 l3">
-          <div className="stack-box">
-            <FontAwesomeIcon icon={faDatabase} className="icon" />
-            <span className="heading-tertiary">database</span>
-            <ul>
-              <li>Postgres</li>
-              <li>Firestore</li>
-              <li>MySQL</li>
-              <li>MongoDB</li>
-            </ul>
-          </div>
+          <StackCard
+            icon={<FontAwesomeIcon icon={faDatabase} className="icon" />}
+            title="databases"
+            skills={skills.databases}
+          />
         </div>
         <div className="deployment col s12 m6 l3">
-          <div className="stack-box">
-            <FontAwesomeIcon icon={faCloud} className="icon" />
-            <span className="heading-tertiary">deployment</span>
-            <ul>
-              <li>Docker</li>
-              <li>Netlify</li>
-              <li>Firebase</li>
-              <li>Heroku</li>
-            </ul>
-          </div>
+          <StackCard
+            icon={<FontAwesomeIcon icon={faCloud} className="icon" />}
+            title="devops"
+            skills={skills.devops}
+          />
         </div>
       </div>
     </div>

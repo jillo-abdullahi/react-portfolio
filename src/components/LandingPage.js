@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Stacks from "./Stacks";
-import ProjectCard from "./ProjectCard";
 import portfolioData, { externalLinks } from "../portfolioData";
 import ContactForm from "./ContactForm";
 import ContactLinks from "./ContactLinks";
 import ProfileImage from "../static/images/me.webp";
 import { SectionHeading } from "./shared/sectionHeading";
 import { AboutMeTimeline } from "./AboutMeTimeline";
+import { ProjectCard } from "./shared/projectCard";
+import { portfolioProjects } from "../portfolioData";
+
 
 const LandingPage = () => {
   const topProjects = portfolioData.topProjects;
@@ -192,8 +194,12 @@ const LandingPage = () => {
         </div>
 
         <div className="content">
-          <div className="projects row">{top}</div>
-          <div className="projects row"> {others}</div>
+          {/* projects  */}
+          <ul className="space-y-[100px] mt-12">
+            {portfolioProjects.map((project, index) => (
+              <ProjectCard key={index} project={project} />
+            ))}
+          </ul>
         </div>
       </section>
 

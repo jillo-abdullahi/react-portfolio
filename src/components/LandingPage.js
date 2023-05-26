@@ -173,7 +173,7 @@ const LandingPage = () => {
         <Stacks />
       </section>
 
-      <section id="portfolio-section" className="bg-[#353D45]">
+      <section id="portfolio-section" className="bg-[#353D45] pb-12">
         <div className="mb-6">
           <SectionHeading heading={"Featured"} subHeading={"projects"} />
         </div>
@@ -195,7 +195,7 @@ const LandingPage = () => {
 
         <div className="content">
           {/* projects  */}
-          <ul className="space-y-[100px] mt-12">
+          <ul className="space-y-[100px]">
             {portfolioProjects.map((project, index) => (
               <ProjectCard key={index} project={project} />
             ))}

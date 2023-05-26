@@ -1,7 +1,4 @@
 import { ProjectStatusBadge } from "../shared/projectStatusBadge";
-import { ButtonLink } from "../shared/buttonLink";
-import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const ProjectCard = ({ project }) => {
   const { title, description, image, preview, github, stacks, completed } =
@@ -27,8 +24,8 @@ export const ProjectCard = ({ project }) => {
             </h3>
           </div>
 
-          <div className="text-gray-200 p-[25px] border border-[#e7a11a60] rounded-xl bg-[#272F37]">
-            <p dangerouslySetInnerHTML={{ __html: description }} />
+          <div className="text-gray-200 p-[25px] border border-gray-800 rounded-xl bg-[#272F3790]">
+            <p>{description}</p>
           </div>
 
           <ul className="flex flex-wrap mt-[25px] mb-[10px] text-orange/90">
@@ -37,10 +34,10 @@ export const ProjectCard = ({ project }) => {
             ))}
           </ul>
 
-          <div className="flex items-center mt-[10px] -ml-[10px] text-slate-600 dark:text-slate-lightest externals">
+          <div className="flex items-center mt-[10px] text-slate-600 dark:text-slate-lightest externals">
             {github && (
               <a
-                class="font-bold capitalize pr-4 text-gray-200 hover:text-orange/90"
+                class="capitalize pr-4 underline text-gray-200 hover:text-orange/90"
                 href={github}
                 target="_blank"
               >

@@ -243,14 +243,14 @@ header .landing-btn {
 
 .stack-box {
   height: auto;
-  background-color: #272f37;
+  background-color: #272f3790;
   margin-bottom: 20px;
   margin-top: 20px;
   font-size: 1.1rem;
   padding: 2rem;
   text-align: center;
   border-radius: 10px;
-  border: 1px solid #2f3847;
+  border: 1px solid rgb(31 41 55);
   transition: transform 0.3s;
 }
 

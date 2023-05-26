@@ -16,8 +16,12 @@ export const AboutMeTimeline = () => {
       lineColor="rgb(229 231 235)"
     >
       {experiences.map(
-        ({ type, title, company, companyUrl, date, location, description }) => (
+        (
+          { type, title, company, companyUrl, date, location, description },
+          index
+        ) => (
           <VerticalTimelineElement
+            key={index}
             className="vertical-timeline-element--work"
             contentStyle={{
               background: "#272F3790",
@@ -52,8 +56,10 @@ export const AboutMeTimeline = () => {
                 </h4>
               </div>
               <ul>
-                {description.map((desc) => (
-                  <li className="text-gray-200">{desc}</li>
+                {description.map((desc, index) => (
+                  <li className="text-gray-200" key={index}>
+                    {desc}
+                  </li>
                 ))}
               </ul>
             </div>

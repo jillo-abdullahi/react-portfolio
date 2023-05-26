@@ -11,7 +11,7 @@ export const ProjectCard = ({ project }) => {
       <div className="project-content z-30">
         <div>
           {!completed && (
-            <div className="flex items-center justify-end">
+            <div className="flex items-center justify-end mb-2">
               <ProjectStatusBadge isProjectComplete={completed} />
             </div>
           )}
@@ -37,7 +37,7 @@ export const ProjectCard = ({ project }) => {
           <div className="flex items-center mt-[10px] text-slate-600 dark:text-slate-lightest externals">
             {github && (
               <a
-                class="capitalize pr-4 underline text-gray-200 hover:text-orange/90"
+                className="capitalize pr-4 underline text-gray-200 hover:text-orange/90"
                 href={github}
                 target="_blank"
               >
@@ -46,11 +46,11 @@ export const ProjectCard = ({ project }) => {
             )}
             {preview && (
               <a
-                class="waves-effect waves-light btn bg-orange/90 hover:bg-orange font-bold capitalize text-blue focus:bg-orange"
+                className="waves-effect waves-light btn bg-orange/90 hover:bg-orange font-bold capitalize text-blue focus:bg-orange"
                 href={preview}
                 target="_blank"
               >
-                <i class="material-icons left">open_in_new</i>Preview
+                <i className="material-icons left">open_in_new</i>Preview
               </a>
             )}
           </div>

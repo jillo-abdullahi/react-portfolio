@@ -7,7 +7,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const ContactLinks = ({ links, showHeader }) => {
-  const { linkedIn, github, facebook, instagram, twitter } = links;
+  const { linkedIn, github, twitter } = links;
 
   return (
     <div className="contact-links">

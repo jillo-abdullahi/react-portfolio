@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Stacks from "./Stacks";
-import portfolioData, { externalLinks } from "../portfolioData";
+import { externalLinks } from "../portfolioData";
 import ContactForm from "./ContactForm";
 import ContactLinks from "./ContactLinks";
 import ProfileImage from "../static/images/me.webp";
@@ -8,20 +8,10 @@ import { SectionHeading } from "./shared/sectionHeading";
 import { AboutMeTimeline } from "./AboutMeTimeline";
 import { ProjectCard } from "./shared/projectCard";
 import { portfolioProjects } from "../portfolioData";
-
+import { faSmile } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const LandingPage = () => {
-  const topProjects = portfolioData.topProjects;
-  const otherProjects = portfolioData.otherProjects;
-
-  const top = topProjects.map((project) => {
-    return <ProjectCard project={project} key={project.id} />;
-  });
-
-  const others = otherProjects.map((project) => {
-    return <ProjectCard project={project} key={project.id} />;
-  });
-
   const [stickyHeader, setStickyHeader] = useState(false);
 
   useEffect(() => {
@@ -63,7 +53,7 @@ const LandingPage = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-center space-y-2">
+          <div className="flex flex-col items-center space-y-2 content">
             <span className="font-bold text-2xl uppercase text-gray-200">
               Hello, I am
             </span>
@@ -77,7 +67,7 @@ const LandingPage = () => {
           </div>
         </div>
         <div>
-          <ContactLinks links={portfolioData.socialLinks} showHeader={false} />
+          <ContactLinks links={externalLinks} showHeader={false} />
         </div>
 
         <div
@@ -174,28 +164,31 @@ const LandingPage = () => {
       </section>
 
       <section id="portfolio-section" className="bg-[#353D45] pb-12">
-        <div className="mb-6">
-          <SectionHeading heading={"Featured"} subHeading={"projects"} />
-        </div>
-        <div className="w-full flex items-center justify-center">
-          <div className="description w-full max-w-4xl">
-            <p className="text-lg text-gray-200 text-center">
-              Here are some of my projects. For a full list, please check out my{" "}
-              <a
-                href={externalLinks.repositories}
-                className="text-orange hover:underline"
-                target="_blank"
-              >
-                Github
-              </a>{" "}
-              profile.
-            </p>
+        <div className="content">
+          <div className="mb-6">
+            <SectionHeading heading={"Featured"} subHeading={"projects"} />
+          </div>
+          <div className="w-full flex items-center justify-center">
+            <div className="description w-full max-w-4xl">
+              <p className="text-lg text-gray-200 text-center">
+                Here are some of my projects. For a full list, please check out
+                my{" "}
+                <a
+                  href={externalLinks.repositories}
+                  className="text-orange hover:underline"
+                  target="_blank"
+                >
+                  Github
+                </a>{" "}
+                profile.
+              </p>
+            </div>
           </div>
         </div>
 
         <div className="content">
           {/* projects  */}
-          <ul className="space-y-[100px]">
+          <ul className="space-y-12">
             {portfolioProjects.map((project, index) => (
               <ProjectCard key={index} project={project} />
             ))}
@@ -204,6 +197,19 @@ const LandingPage = () => {
       </section>
 
       <section id="contact-section" className="contact">
+        <div className="content">
+          <div className="mb-6">
+            <SectionHeading heading={"Contact"} subHeading={"me"} />
+          </div>
+          <div className="w-full flex items-center justify-center pb-4">
+            <div className="description w-full max-w-4xl">
+              <p className="text-lg text-gray-200 text-center">
+                I would love to hear from you!{" "}
+                <FontAwesomeIcon icon={faSmile} className="text-orange" />
+              </p>
+            </div>
+          </div>
+        </div>
         <div className="content">
           <div className="row">
             <div className="contacts-content col s12">

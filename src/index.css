@@ -8,6 +8,7 @@ body {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #353d45;
 }
 
 main {
@@ -158,7 +159,7 @@ header .landing-btn {
 
 @media (max-width: 430px) {
   .navigation-link {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
@@ -385,13 +386,26 @@ header .landing-btn {
   font-size: 2vh;
 }
 
-input,
-textarea {
-  color: #bdbdbd;
+label.active {
+  color: #e7a11a !important;
 }
 
-input[type="text"]:focus {
-  border-bottom: 1px solid #e65100;
+input,
+textarea {
+  color: rgb(229 231 235) !important;
+}
+
+input:focus,
+textarea:focus {
+  border-bottom: 1px solid #e7a11a !important;
+  -webkit-box-shadow: 0 1px 0 0 #e7a11a !important;
+  box-shadow: 0 1px 0 0 #e7a11a !important;
+  color: rgb(229 231 235) !important;
+}
+
+input:active,
+textarea:active {
+  color: rgb(229 231 235) !important;
 }
 
 button[type="submit"] {

@@ -26,10 +26,6 @@ class ContactForm extends Component {
     M.toast({ html: toastHTML });
   };
 
-  componentDidMount() {
-    console.log(process.env);
-  }
-
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
@@ -42,18 +38,13 @@ class ContactForm extends Component {
       loading: true,
     });
 
-    const {
-      REACT_APP_SERVICE_ID,
-      REACT_APP_TEMPLATE_ID,
-      REACT_APP_USER_ID,
-    } = process.env;
-
+    // I know this is bad practice but keeping it here for now.
     emailjs
       .send(
-        REACT_APP_SERVICE_ID,
-        REACT_APP_TEMPLATE_ID,
+        "service_6aqh4bj",
+        "template_w1b9obl",
         this.state,
-        REACT_APP_USER_ID
+        "user_asn4biZeLW7gkYQlbZLk9"
       )
       .then(
         (response) => {
@@ -70,11 +61,6 @@ class ContactForm extends Component {
   render() {
     return (
       <div className="contact-me-form">
-        <div className="heading">
-          <span className="secondary-heading-small">
-            I would love to hear from you
-          </span>
-        </div>
         <form className="col s12" onSubmit={this.handleSubmit}>
           <div className="row">
             <div className="input-field col s6">

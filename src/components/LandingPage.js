@@ -133,9 +133,6 @@ const LandingPage = () => {
                 ideas to life. I'm always up for a challenge and eager to stay
                 on the cutting edge of technology.
               </p>
-              <p className="text-lg text-gray-200">
-                Let's collaborate and bring digital dreams to reality!
-              </p>
             </div>
             <div className="flex flex-col space-y-6">
               <div className="flex flex-col items-center space-y-2">

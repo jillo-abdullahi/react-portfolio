@@ -151,11 +151,11 @@ export const portfolioProjects = [
 
 export const skills = {
   backend: [
-    { name: "NodeJS", level: "85%" },
-    { name: "ExpressJS", level: "89%" },
-    { name: "Python - Django", level: "75%" },
+    { name: "Node.js", level: "85%" },
+    { name: "NestJS/Express.js", level: "89%" },
+    { name: "Python - Django", level: "60%" },
     { name: "GraphQL/REST APIs", level: "90%" },
-    { name: "Solidity", level: "40%" },
+    { name: "Solidity", level: "30%" },
   ],
   frontend: [
     { name: "ReactJS", level: "90%" },

@@ -122,7 +122,7 @@ export const portfolioProjects = [
     description:
       "This is a REST API for managing supply chain items and their events using Express.js and PostgreSQL.",
     image: tlipApi,
-    preview: "https://tlip-api.onrender.com/api-docs/#/",
+    preview: "https://tlip-api.onrender.com/api-docs/",
     github: "https://github.com/jillo-abdullahi/tlip-api",
     stacks: ["NodeJS", "ExpressJS", "PostgreSQL", "Docker"],
     completed: true,
@@ -161,7 +161,7 @@ export const skills = {
     { name: "ReactJS", level: "90%" },
     { name: "JavaScript/TypeScript", level: "90%" },
     { name: "NextJS", level: "85%" },
-    { name: "HTML/CSS", level: "89%" },
+    { name: "Mantine UI", level: "89%" },
     { name: "Tailwind CSS", level: "85%" },
   ],
   databases: [

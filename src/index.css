@@ -5,7 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300;400;500;600&display=swap");
 
 body {
-  font-family: 'Exo', sans-serif;
+  font-family: "Exo", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #353d45;
@@ -406,22 +406,6 @@ textarea:focus {
 input:active,
 textarea:active {
   color: rgb(229 231 235) !important;
-}
-
-button[type="submit"] {
-  margin-left: 10px;
-  border-radius: 3px;
-  font-weight: 600;
-  border: none;
-  background: #e7a11a;
-  color: #2f3847 !important;
-  text-transform: uppercase;
-  display: inline-block;
-}
-
-button[type="submit"]:disabled {
-  background: #ebb448 !important;
-  color: #fff !important;
 }
 
 .submit-btn-section {

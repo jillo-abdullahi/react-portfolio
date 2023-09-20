@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane, faSpinner } from "@fortawesome/free-solid-svg-icons";
 import M from "materialize-css";
 import emailjs from "emailjs-com";
+import { IconSend } from "@tabler/icons-react";
 
 class ContactForm extends Component {
   initialState = {
@@ -39,6 +40,7 @@ class ContactForm extends Component {
     });
 
     // I know this is bad practice but keeping it here for now.
+    //TODO: move domain to vercel so we can store these in the environment
     emailjs
       .send(
         "service_6aqh4bj",
@@ -108,17 +110,17 @@ class ContactForm extends Component {
               <label htmlFor="message">Message</label>
             </div>
           </div>
-          <div className="submit-btn-section row">
+          <div className="submit-btn-section row flex justify-center items-center">
             <button
-              className="btn waves-effect waves-light"
+              className="relative items-center gap-x-1.5 rounded-md px-4 py-2 font-semibold focus:z-10 bg-orange/90 capitalize text-blue focus:bg-orange flex text-lg"
               type="submit"
               disabled={this.state.loading}
             >
-              Send&nbsp;
+              <span>Send</span>
               {this.state.loading ? (
                 <FontAwesomeIcon icon={faSpinner} spin />
               ) : (
-                <FontAwesomeIcon icon={faPaperPlane} />
+                <IconSend className="h-4 w-4 text-yellow" aria-hidden="true" />
               )}
             </button>
           </div>

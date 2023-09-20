@@ -58,7 +58,7 @@ const LandingPage = () => {
               Hello, I am
             </span>
             <span className="uppercase text-5xl text-[#e7a11a] font-bold">
-              Jillo Woche.
+              Jillo Woche
             </span>
             <hr className="landing-divider" />
             <span className="font-bold pt-2 uppercase text-2xl text-gray-200">

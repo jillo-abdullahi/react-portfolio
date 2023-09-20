@@ -1,4 +1,5 @@
 import { ProjectStatusBadge } from "../shared/projectStatusBadge";
+import ButtonGroup from "../shared/buttonGroup";
 
 export const ProjectCard = ({ project }) => {
   const { title, description, image, preview, github, stacks, completed } =
@@ -35,24 +36,7 @@ export const ProjectCard = ({ project }) => {
           </ul>
 
           <div className="flex items-center mt-[10px] text-slate-600 dark:text-slate-lightest externals">
-            {github && (
-              <a
-                className="capitalize pr-4 underline text-gray-200 hover:text-orange/90"
-                href={github}
-                target="_blank"
-              >
-                View code
-              </a>
-            )}
-            {preview && (
-              <a
-                className="waves-effect waves-light btn bg-orange/90 hover:bg-orange font-bold capitalize text-blue focus:bg-orange"
-                href={preview}
-                target="_blank"
-              >
-                <i className="material-icons left">open_in_new</i>Preview
-              </a>
-            )}
+            <ButtonGroup link1={preview} link2={github} />
           </div>
         </div>
       </div>

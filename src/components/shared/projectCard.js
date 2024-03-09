@@ -18,7 +18,7 @@ export const ProjectCard = ({ project }) => {
           )}
 
           <div className="title flex">
-            <h3 className="mb-5 text-gray-200 hover:text-orange featured-size font-semibold externals w-fit">
+            <h3 className="mb-5 text-orange featured-size font-semibold externals w-fit">
               <a href={preview} target="_blank">
                 {title}
               </a>

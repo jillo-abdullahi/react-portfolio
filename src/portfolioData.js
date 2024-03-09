@@ -1,8 +1,8 @@
 import memoryGame from "./static/images/portfolio/memory.png";
 import dictionaryGame from "./static/images/portfolio/dictionary.png";
 import rockPaperScissors from "./static/images/portfolio/rockPaperScissors.png";
-import tlipApi from "./static/images/portfolio/tlip-api.png";
-import tlipWeb from "./static/images/portfolio/tlip.png";
+import homestead from "./static/images/portfolio/homestead.png";
+import tstkpresale from "./static/images/portfolio/tstkpresale.png";
 
 export const externalLinks = {
   github: "https://github.com/jillo-abdullahi",
@@ -98,6 +98,26 @@ export const experiences = [
 
 export const portfolioProjects = [
   {
+    title: "An ERC-20 token pre-sale dApp",
+    description:
+      "A dApp that allows users to participate in an ERC-20 token pre-sale using the Polygon Mumbai chain.",
+    image: tstkpresale,
+    preview: "https://tstk-beincrypto.vercel.app/",
+    github: "https://github.com/jillo-abdullahi/tstk-beincrypto",
+    stacks: ["Mantine UI", "TypeScript", "Connect-kit", "Wagmi"],
+    completed: true,
+  },
+  {
+    title: "A real estate listing platform with a GraphQL-based API",
+    description:
+      "An app that allows users to list properties for sale. User can register accounts, login, add, edit, and delete properties.",
+    image: homestead,
+    preview: "https://homestead-three.vercel.app/",
+    github: "https://github.com/jillo-abdullahi/homestead",
+    stacks: ["Next.js", "GraphQL", "TypeScript", "Postgres with Prisma"],
+    completed: true,
+  },
+  {
     title: "Memory Game",
     description:
       "A fun memory game where players try to match pairs against each other or against the CPU.",
@@ -107,26 +127,7 @@ export const portfolioProjects = [
     stacks: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
     completed: true,
   },
-  {
-    title: "Supply Chain Management App",
-    description:
-      "This is the frontend for a Supply Chain Items application. This application interfaces with a Node.js REST API to perform CRUD operations on supply chain items.",
-    image: tlipWeb,
-    preview: "https://tlip-frontend.vercel.app/",
-    github: "https://github.com/jillo-abdullahi/tlip-frontend",
-    stacks: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
-    completed: true,
-  },
-  {
-    title: "Supply Chain Management API",
-    description:
-      "This is a REST API for managing supply chain items and their events using Express.js and PostgreSQL.",
-    image: tlipApi,
-    preview: "https://tlip-api.onrender.com/api-docs/",
-    github: "https://github.com/jillo-abdullahi/tlip-api",
-    stacks: ["NodeJS", "ExpressJS", "PostgreSQL", "Docker"],
-    completed: true,
-  },
+
   {
     title: "Dictionary web app solution",
     description:
@@ -158,23 +159,23 @@ export const skills = {
     { name: "Solidity", level: "30%" },
   ],
   frontend: [
-    { name: "ReactJS", level: "90%" },
+    { name: "React.js", level: "90%" },
+    { name: "Vue.js", level: "80%" },
     { name: "JavaScript/TypeScript", level: "90%" },
     { name: "NextJS", level: "85%" },
-    { name: "Mantine UI", level: "89%" },
-    { name: "Tailwind CSS", level: "85%" },
+    { name: "Component libraries", level: "85%" },
   ],
   databases: [
     { name: "PostgreSQL", level: "82%" },
     { name: "MySQL", level: "75%" },
     { name: "Google Firestore", level: "80%" },
     { name: "SQLite", level: "70%" },
-    { name: "MongoDB", level: "60%" },
+    { name: "DynamoDB", level: "80%" },
   ],
   devops: [
     { name: "Docker", level: "80%" },
     { name: "Firebase", level: "70%" },
-    { name: "Netlify", level: "80%" },
+    { name: "Github Actions", level: "80%" },
     { name: "Vercel", level: "80%" },
     { name: "CircleCI", level: "60%" },
   ],

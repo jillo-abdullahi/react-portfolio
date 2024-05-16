@@ -534,3 +534,24 @@ footer {
   width: 100%;
   text-align: center;
 }
+
+/* src/WavingEmoji.css */
+.waving-emoji {
+  display: inline-block;
+  font-size: 1.2rem; /* Adjust the size as needed */
+  transform: rotate(50%); /* Slightly tilt the emoji to the left */
+  animation: wave 2s infinite;
+  transform-origin: 80% 80%; /* Adjust to make the wave look natural */
+}
+
+@keyframes wave {
+  0% { transform: rotate(-10deg); }
+  10% { transform: rotate(4deg); }
+  20% { transform: rotate(-18deg); }
+  30% { transform: rotate(4deg); }
+  40% { transform: rotate(-14deg); }
+  50% { transform: rotate(0deg); }
+  60% { transform: rotate(-10deg); }
+  100% { transform: rotate(-10deg); }
+}
+

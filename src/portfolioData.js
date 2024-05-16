@@ -101,7 +101,7 @@ export const portfolioProjects = [
   {
     title: "A link sharing app for developers",
     description:
-      "A fully-functional link-sharing app for developers (mostly). Developers can consolidate and share their links to different platforms with just one URL.",
+      "A fully-functional link-sharing app for developers. Developers can consolidate and share their links to different platforms with just one URL.",
     image: devlinks,
     preview: "https://my-links-amber.vercel.app/",
     github: "https://github.com/jillo-abdullahi/my-links",

@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { faSmile } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Stacks from "./Stacks";
 import { externalLinks } from "../portfolioData";
 import ContactForm from "./ContactForm";
@@ -8,8 +10,7 @@ import { SectionHeading } from "./shared/sectionHeading";
 import { AboutMeTimeline } from "./AboutMeTimeline";
 import { ProjectCard } from "./shared/projectCard";
 import { portfolioProjects } from "../portfolioData";
-import { faSmile } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import WavingHand from "./WavingHand";
 
 const LandingPage = () => {
   const [stickyHeader, setStickyHeader] = useState(false);
@@ -54,9 +55,13 @@ const LandingPage = () => {
           </div>
 
           <div className="flex flex-col items-center space-y-2 content">
-            <span className="font-bold text-2xl uppercase text-gray-200">
-              Hello, I am
-            </span>
+            <div className="flex items-center space-x-1">
+              <WavingHand />
+              <span className="font-bold text-2xl uppercase text-gray-200">
+                Hello, I am
+              </span>
+            </div>
+
             <span className="uppercase text-5xl text-[#e7a11a] font-bold">
               Jillo Woche
             </span>

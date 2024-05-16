@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLinkedin,
   faGithub,
-  faTwitter,
+  faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 
 const ContactLinks = ({ links, showHeader }) => {
@@ -46,7 +46,7 @@ const ContactLinks = ({ links, showHeader }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faTwitter} style={{ fontSize: "30px" }} />
+            <FontAwesomeIcon icon={faXTwitter} style={{ fontSize: "30px" }} />
           </a>
         </div>
       </div>

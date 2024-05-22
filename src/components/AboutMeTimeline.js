@@ -17,7 +17,7 @@ export const AboutMeTimeline = () => {
     >
       {experiences.map(
         (
-          { type, title, company, companyUrl, date, location, description },
+          { type, title, company, companyUrl, companyLogo, date, location, description },
           index
         ) => (
           <VerticalTimelineElement
@@ -44,15 +44,15 @@ export const AboutMeTimeline = () => {
             <div className="timeLineContent text-left space-y-3">
               <div className="space-y-2">
                 <h3 className="font-bold text-xl text-orange/90">{title}</h3>
-                <h4 className="font-normal text-orange/80">
+                <h4 className="font-semibold text-orange/80 flex items-center justify-start">
                   <a
                     href={companyUrl}
                     target="_blank"
-                    className="hover:underline"
+                    className="hover:underline flex items-center justify-start space-x-2"
                   >
-                    {company}
-                  </a>{" "}
-                  - {location}
+                    {companyLogo ? <img src={companyLogo} className="w-6 h-6 rounded-md" alt="logo" /> : null}<span>{company}</span>
+                  </a>
+                  <span>&nbsp;- {location}</span>
                 </h4>
               </div>
               <ul>

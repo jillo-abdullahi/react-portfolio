@@ -149,8 +149,6 @@ header .landing-btn {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 
 /* default styling for timeline component forces date to have .7 opacity  */
@@ -210,7 +208,6 @@ header .landing-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2vh 0;
   background-attachment: fixed;
   background: url("./static/images/icon-bg.svg") no-repeat center center;
   background-size: cover;

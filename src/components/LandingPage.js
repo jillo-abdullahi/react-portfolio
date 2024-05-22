@@ -1,5 +1,5 @@
 import React from "react";
-import { MapPinIcon } from "@heroicons/react/24/outline";
+import { MapPinIcon, AcademicCapIcon } from "@heroicons/react/24/outline";
 import { faSmile } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -42,7 +42,7 @@ const LandingPage = () => {
               <span className="text-5xl text-orange font-bold">
                 Jillo Woche
               </span>
-              <hr className="landing-divider" />
+              <hr className="bg-orange border border-orange w-64" />
               <span className="font-bold pt-2 text-2xl text-gray-200">
                 Full Stack Software Engineer
               </span>
@@ -59,31 +59,27 @@ const LandingPage = () => {
         </div>
       </header>
       <section id="about" className="bg-[#353D45]">
-        <div className="mb-6">
-          <SectionHeading heading={"About"} subHeading={"me"} />
+        <div className="mb-6 mt-20">
+          <SectionHeading heading={"About"} subHeading={"me"} id="about" />
         </div>
 
         <div className="content">
-          <div className="flex flex-col space-y-8 items-center w-full">
+          <div className="flex flex-col space-y-10 items-center w-full">
             <div className="description w-full max-w-4xl">
-              <p className="text-lg text-gray-200">
-                I am a full-stack software engineer who loves diving
-                into both web2 and web3 technologies. With a passion for
-                problem-solving, I embark on coding adventures to create elegant
-                and efficient solutions.
-              </p>
-              <p className="text-lg text-gray-200">
-                My superpower lies in crafting clean, bug-free code that brings
-                ideas to life. I'm always up for a challenge and eager to stay
-                on the cutting edge of technology.
+              <p className="text-base text-gray-200">
+                Innovative Full Stack Software Engineer with a keen eye for
+                detail and a commitment to continuous learning. Armed with a
+                solid foundation in both front-end and back-end development, I
+                thrive on tackling complex challenges and delivering elegant
+                solutions within the web2 and web3 space.
               </p>
             </div>
-            <div className="flex flex-col space-y-6">
-              <div className="flex flex-col items-center space-y-2">
-                <h3 className="text-orange text-2xl font-semibold">
+            <div className="flex flex-col space-y-2">
+              <div className="flex items-center justify-center space-x-2">
+                <AcademicCapIcon className="w-6 h-6 text-orange" />
+                <h3 className="text-orange text-xl font-semibold">
                   Education and work experience
                 </h3>
-                <hr className="landing-divider" />
               </div>
 
               <AboutMeTimeline />
@@ -92,12 +88,12 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <section id="stacks">
-        <div className="mb-6">
-          <SectionHeading heading={"My"} subHeading={"tech stack"} />
+      <section id="stacks" className="pb-12">
+        <div className="mb-6 mt-20">
+          <SectionHeading heading={"My"} subHeading={"tech stack"} id="stack" />
         </div>
         <div className="description w-full max-w-4xl">
-          <p className="text-lg text-gray-200 text-center">
+          <p className="text-base text-gray-200 text-center">
             I work hard to improve my skills regularly.
           </p>
         </div>
@@ -105,13 +101,17 @@ const LandingPage = () => {
       </section>
 
       <section id="projects" className="bg-[#353D45] pb-12">
-        <div className="content">
+        <div className="pt-20">
           <div className="mb-6">
-            <SectionHeading heading={"Featured"} subHeading={"projects"} />
+            <SectionHeading
+              heading={"Featured"}
+              subHeading={"projects"}
+              id="projects"
+            />
           </div>
           <div className="w-full flex items-center justify-center">
             <div className="description w-full max-w-4xl">
-              <p className="text-lg text-gray-200 text-center">
+              <p className="text-base text-gray-200 text-center">
                 Here are some of my projects. For a full list, please check out
                 my{" "}
                 <a
@@ -138,13 +138,17 @@ const LandingPage = () => {
       </section>
 
       <section id="contact" className="contact">
-        <div className="content">
+        <div className="pt-20">
           <div className="mb-6">
-            <SectionHeading heading={"Contact"} subHeading={"me"} />
+            <SectionHeading
+              heading={"Contact"}
+              subHeading={"me"}
+              id="contact"
+            />
           </div>
           <div className="w-full flex items-center justify-center pb-4">
             <div className="description w-full max-w-4xl">
-              <p className="text-lg text-gray-200 text-center">
+              <p className="text-base text-gray-200 text-center">
                 I would love to hear from you!{" "}
                 <FontAwesomeIcon icon={faSmile} className="text-orange" />
               </p>
@@ -166,32 +170,6 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-        <footer>
-          <div className="nav-nav-content">
-            <div className="nav-content row">
-              <div className="col sm3">
-                <a className="navigation-link" href="#home">
-                  <FontAwesomeIcon icon={faUser} className="text-orange" />
-                </a>
-              </div>
-              <div className="col sm3">
-                <a className="navigation-link" href="#stacks">
-                  My Tech Stack
-                </a>
-              </div>
-              <div className="col sm3">
-                <a className="navigation-link" href="#projects">
-                  my portfolio
-                </a>
-              </div>
-              <div className="col sm3">
-                <a className="navigation-link" href="#contact">
-                  contact me
-                </a>
-              </div>
-            </div>
-          </div>
-        </footer>
       </section>
     </main>
   );

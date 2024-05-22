@@ -1,8 +1,24 @@
-export const SectionHeading = ({ heading, subHeading }) => {
+import {
+  UserCircleIcon,
+  EnvelopeIcon,
+  Square3Stack3DIcon,
+  RocketLaunchIcon,
+} from "@heroicons/react/24/outline";
+
+export const SectionHeading = ({ heading, subHeading, id }) => {
   return (
-    <div className="flex items-center justify-center">
-      <h2 className="font-bold text-3xl text-gray-200">
-        {heading} <span className="text-orange">{subHeading}</span>
+    <div className="flex items-center justify-center space-x-1">
+      {id === "about" ? (
+        <UserCircleIcon className="w-6 h-6 text-orange" />
+      ) : id === "contact" ? (
+        <EnvelopeIcon className="w-6 h-6 text-orange" />
+      ) : id === "stack" ? (
+        <Square3Stack3DIcon className="w-6 h-6 text-orange" />
+      ) : id === "projects" ? (
+        <RocketLaunchIcon className="w-6 h-6 text-orange" />
+      ) : null}
+      <h2 className="font-bold text-2xl text-gray-200">
+        {heading} {subHeading}
       </h2>
     </div>
   );

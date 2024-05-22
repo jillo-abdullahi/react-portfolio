@@ -6,50 +6,28 @@ import {
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 
-const ContactLinks = ({ links, showHeader }) => {
+const ContactLinks = ({ links }) => {
   const { linkedIn, github, twitter } = links;
 
+  const socialLinks = [
+    { icon: faGithub, href: github },
+    { icon: faLinkedin, href: linkedIn },
+    { icon: faXTwitter, href: twitter },
+  ];
+
   return (
-    <div className="contact-links">
-      {showHeader && (
-        <div className="heading">
-          <span className="secondary-heading-small">
-            connect with me online
-          </span>
-        </div>
-      )}
-      <div className="links">
-        <div className="social-link">
-          <a
-            className="profile-link"
-            href={github}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faGithub} style={{ fontSize: "30px" }} />
-          </a>
-        </div>
-        <div className="social-link">
-          <a
-            className="profile-link"
-            href={linkedIn}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faLinkedin} style={{ fontSize: "30px" }} />
-          </a>
-        </div>
-        <div className="social-link">
-          <a
-            className="profile-link"
-            href={twitter}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faXTwitter} style={{ fontSize: "30px" }} />
-          </a>
-        </div>
-      </div>
+    <div className="flex items-center justify-center space-x-3 px-3 py-2">
+      {socialLinks.map(({ icon, href }, index) => (
+        <a
+          className="text-white hover:text-orange transition-all duration-150"
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          key={index}
+        >
+          <FontAwesomeIcon icon={icon} style={{ fontSize: "26px" }} />
+        </a>
+      ))}
     </div>
   );
 };

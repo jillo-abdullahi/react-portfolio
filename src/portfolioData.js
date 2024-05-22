@@ -10,7 +10,9 @@ export const externalLinks = {
   linkedIn: "https://www.linkedin.com/in/jilloabdullahi/",
   twitter: "https://x.com/jillo_woche",
   repositories: "https://github.com/jillo-abdullahi?tab=repositories",
+  calLink: "https://cal.com/jillowoche/30min"
 };
+
 
 export const experiences = [
   {

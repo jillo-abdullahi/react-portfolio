@@ -11,6 +11,7 @@ import {
   CalendarDaysIcon,
 } from "@heroicons/react/24/outline";
 import WorkAvailabilityIndicator from "./WorkAvailabilityIndicator";
+import { externalLinks } from "../portfolioData";
 
 const navigation = [
   { name: "About", href: "#about" },
@@ -18,8 +19,6 @@ const navigation = [
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ];
-
-const calendarLink = "https://cal.com/jillowoche/30min";
 
 export default function NavBarTest() {
   return (
@@ -72,7 +71,7 @@ export default function NavBarTest() {
                   <a
                     type="button"
                     className="relative inline-flex uppercase items-center gap-x-1.5 rounded-md bg-orange px-3 py-2 text-sm font-semibold text-blue shadow-sm hover:bg-orange/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange/80 cursor-pointer"
-                    href={calendarLink}
+                    href={externalLinks.calLink}
                     target="_blank"
                   >
                     <CalendarDaysIcon
@@ -111,7 +110,7 @@ export default function NavBarTest() {
                     <a
                       type="button"
                       className="relative inline-flex uppercase items-center gap-x-1.5 rounded-md bg-orange px-3 py-2 text-sm font-semibold text-blue shadow-sm hover:bg-orange/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange/80 cursor-pointer"
-                      href={calendarLink}
+                      href={externalLinks.calLink}
                       target="_blank"
                     >
                       <CalendarDaysIcon

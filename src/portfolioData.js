@@ -8,7 +8,7 @@ import devlinks from "./static/images/portfolio/devlinks.png";
 export const externalLinks = {
   github: "https://github.com/jillo-abdullahi",
   linkedIn: "https://www.linkedin.com/in/jilloabdullahi/",
-  twitter: "https://twitter.com/jillo_woche",
+  twitter: "https://x.com/jillo_woche",
   repositories: "https://github.com/jillo-abdullahi?tab=repositories",
 };
 

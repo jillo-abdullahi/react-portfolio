@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { MapPinIcon } from "@heroicons/react/24/outline";
 import { faSmile } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Stacks from "./Stacks";
 import { externalLinks } from "../portfolioData";
@@ -11,115 +13,52 @@ import { AboutMeTimeline } from "./AboutMeTimeline";
 import { ProjectCard } from "./shared/projectCard";
 import { portfolioProjects } from "../portfolioData";
 import WavingHand from "./WavingHand";
+import ContactMeForm from "./ContactMeForm";
+import NavBar from "./NavBar";
 
 const LandingPage = () => {
-  const [stickyHeader, setStickyHeader] = useState(false);
-
-  useEffect(() => {
-    window.onscroll = function () {
-      handleScroll();
-    };
-
-    var header = document.getElementById("header-nav");
-    var aboutSection = document.getElementById("about-section");
-    var stackSection = document.getElementById("stacks-section");
-    var portfolioSection = document.getElementById("portfolio-section");
-    var contactSection = document.getElementById("contact-section");
-
-    var sticky = header.offsetTop;
-
-    function handleScroll() {
-      if (window.pageYOffset > sticky) {
-        setStickyHeader(true);
-        aboutSection.classList.add("header-room");
-        stackSection.classList.add("header-room");
-        portfolioSection.classList.add("header-room");
-        contactSection.classList.add("header-room");
-      } else {
-        setStickyHeader(false);
-        aboutSection.classList.remove("header-room");
-        stackSection.classList.remove("header-room");
-        portfolioSection.classList.remove("header-room");
-        contactSection.classList.remove("header-room");
-      }
-    }
-  });
   return (
     <main>
       <header id="home">
-        <div className="flex flex-col space-y-8 items-center header-title">
-          <div className="rounded-full bg-transparent border-8 border-[#E7A11A78]">
-            <div className="profile-img">
-              <img src={ProfileImage} alt="profile" />
+        <div className="h-[10%] pt-4 w-full max-w-7xl">
+          <NavBar />
+        </div>
+        <div className="h-[90%] flex flex-col items-center justify-center">
+          <div className="flex flex-col space-y-8 items-center header-title">
+            <div className="rounded-full bg-transparent border-8 border-[#E7A11A78]">
+              <div className="profile-img">
+                <img src={ProfileImage} alt="profile" />
+              </div>
             </div>
-          </div>
 
-          <div className="flex flex-col items-center space-y-2 content">
-            <div className="flex items-center space-x-1">
-              <WavingHand />
-              <span className="font-bold text-2xl uppercase text-gray-200">
-                Hello, I am
+            <div className="flex flex-col items-center space-y-2 content justify-center">
+              <div className="flex items-center space-x-1">
+                <WavingHand />
+                <span className="text-2xl text-gray-200 font-normal">
+                  Hello, I am
+                </span>
+              </div>
+
+              <span className="text-5xl text-orange font-bold">
+                Jillo Woche
+              </span>
+              <hr className="landing-divider" />
+              <span className="font-bold pt-2 text-2xl text-gray-200">
+                Full Stack Software Engineer
+              </span>
+              <span className="flex items-center justify-center space-x-1">
+                <MapPinIcon className="text-orange h-4 w-4" />{" "}
+                <span className="text-sm text-white">Nairobi, Kenya</span>
               </span>
             </div>
-
-            <span className="uppercase text-5xl text-[#e7a11a] font-bold">
-              Jillo Woche
-            </span>
-            <hr className="landing-divider" />
-            <span className="font-bold pt-2 uppercase text-2xl text-gray-200">
-              Full Stack Software Engineer
-            </span>
           </div>
-        </div>
-        <div>
-          <ContactLinks links={externalLinks} showHeader={false} />
-        </div>
 
-        <div
-          id="header-nav"
-          className={
-            stickyHeader ? "sticky-header-navigation" : "header-navigation"
-          }
-        >
-          <div className="nav-nav-content">
-            <div className="nav-content row">
-              <div className="col sm3">
-                <a
-                  className="navigation-link text-gray-200"
-                  href="#about-section"
-                >
-                  about me
-                </a>
-              </div>
-              <div className="col sm3">
-                <a
-                  className="navigation-link text-gray-200"
-                  href="#stacks-section"
-                >
-                  Tech Stack
-                </a>
-              </div>
-              <div className="col sm3">
-                <a
-                  className="navigation-link text-gray-200"
-                  href="#portfolio-section"
-                >
-                  projects
-                </a>
-              </div>
-              <div className="col sm3">
-                <a
-                  className="navigation-link text-gray-200"
-                  href="#contact-section"
-                >
-                  contact me
-                </a>
-              </div>
-            </div>
+          <div className="rounded-full bg-[#272F37] border border-gray-900 mt-2">
+            <ContactLinks links={externalLinks} showHeader={false} />
           </div>
         </div>
       </header>
-      <section id="about-section" className="bg-[#353D45]">
+      <section id="about" className="bg-[#353D45]">
         <div className="mb-6">
           <SectionHeading heading={"About"} subHeading={"me"} />
         </div>
@@ -128,7 +67,7 @@ const LandingPage = () => {
           <div className="flex flex-col space-y-8 items-center w-full">
             <div className="description w-full max-w-4xl">
               <p className="text-lg text-gray-200">
-                Hello there! I'm a full-stack software engineer who loves diving
+                I am a full-stack software engineer who loves diving
                 into both web2 and web3 technologies. With a passion for
                 problem-solving, I embark on coding adventures to create elegant
                 and efficient solutions.
@@ -153,7 +92,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <section id="stacks-section">
+      <section id="stacks">
         <div className="mb-6">
           <SectionHeading heading={"My"} subHeading={"tech stack"} />
         </div>
@@ -165,7 +104,7 @@ const LandingPage = () => {
         <Stacks />
       </section>
 
-      <section id="portfolio-section" className="bg-[#353D45] pb-12">
+      <section id="projects" className="bg-[#353D45] pb-12">
         <div className="content">
           <div className="mb-6">
             <SectionHeading heading={"Featured"} subHeading={"projects"} />
@@ -198,7 +137,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <section id="contact-section" className="contact">
+      <section id="contact" className="contact">
         <div className="content">
           <div className="mb-6">
             <SectionHeading heading={"Contact"} subHeading={"me"} />
@@ -219,26 +158,34 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
+
+        <div className="content">
+          <div className="row">
+            <div className="contacts-content col s12">
+              <ContactMeForm />
+            </div>
+          </div>
+        </div>
         <footer>
           <div className="nav-nav-content">
             <div className="nav-content row">
               <div className="col sm3">
                 <a className="navigation-link" href="#home">
-                  home
+                  <FontAwesomeIcon icon={faUser} className="text-orange" />
                 </a>
               </div>
               <div className="col sm3">
-                <a className="navigation-link" href="#stacks-section">
+                <a className="navigation-link" href="#stacks">
                   My Tech Stack
                 </a>
               </div>
               <div className="col sm3">
-                <a className="navigation-link" href="#portfolio-section">
+                <a className="navigation-link" href="#projects">
                   my portfolio
                 </a>
               </div>
               <div className="col sm3">
-                <a className="navigation-link" href="#contact-section">
+                <a className="navigation-link" href="#contact">
                   contact me
                 </a>
               </div>

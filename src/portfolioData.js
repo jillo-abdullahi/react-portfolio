@@ -4,13 +4,19 @@ import rockPaperScissors from "./static/images/portfolio/rockPaperScissors.png";
 import homestead from "./static/images/portfolio/homestead.png";
 import tstkpresale from "./static/images/portfolio/tstkpresale.png";
 import devlinks from "./static/images/portfolio/devlinks.png";
+import syndicateLogo from "./static/images/experience/syndicateLogo.jpeg"
+import iotaLogo from "./static/images/experience/iotaLogo.jpeg"
+import cellulantLogo from "./static/images/experience/cellulantLogo.jpeg"
+import andelaLogo from "./static/images/experience/andelaLogo.jpeg"
+import samaLogo from "./static/images/experience/samaLogo.jpeg"
+import jkuatLogo from "./static/images/experience/jkuatLogo.jpeg"
 
 export const externalLinks = {
   github: "https://github.com/jillo-abdullahi",
   linkedIn: "https://www.linkedin.com/in/jilloabdullahi/",
   twitter: "https://x.com/jillo_woche",
   repositories: "https://github.com/jillo-abdullahi?tab=repositories",
-  calLink: "https://cal.com/jillowoche/30min"
+  calLink: "https://cal.com/jillowoche/15min"
 };
 
 
@@ -18,16 +24,29 @@ export const experiences = [
   {
     type: "work",
     title: "Full Stack Software Engineer",
+    company: "IOTA",
+    companyUrl: "https://www.linkedin.com/company/iotafoundation/",
+    companyLogo: iotaLogo,
+    location: "Nairobi, Kenya",
+    date: "2023 - 2024",
+    description: [
+      "Wrote high-performance, secure, and maintainable code that met business requirements and followed industry best practices.",
+      "Developed a full stack web application using modern technologies such as React, Node.js, and DynamoDB.",
+    ],
+  },
+  {
+    type: "work",
+    title: "Full Stack Software Engineer",
     company: "Syndicate",
     companyUrl: "https://www.linkedin.com/company/syndicate-protocol/",
-    location: "Global",
+    companyLogo: syndicateLogo,
+    location: "Global, OO",
     date: "2021 - 2023",
     description: [
-      "Developed and maintained complex, scalable web applications using TypeScript, ReactJS, and NextJS.",
-      "Worked closely with designers, product managers, and other engineers to deliver high-quality software solutions.",
-      "Collaborated with other engineers to build reusable components and libraries for future use.",
-      "Interpreted Ethereum smart contracts and integrated Web3 functionality into applications.",
-      "Worked with the team to improve the codebase and overall product quality.",
+      "Successfully built (from the ground up) and deployed a performant web3 dApp within 3 months using TypeScript and React on the Ethereum and Polygon chains.",
+      "Successfully built and launched Collectives, a dApp feature focused on creating communities around generative art NFTs.",
+      "Collaborated with team members to develop and deploy a GraphQL back-end API to store off-chain data within a month.",
+      "Wrote robust tests for the existing smart contracts to ensure reliability and security.",
     ],
   },
   {
@@ -35,6 +54,7 @@ export const experiences = [
     title: "Front-end Software Engineer",
     company: "Cellulant",
     companyUrl: "https://www.linkedin.com/company/cellulant/",
+    companyLogo: cellulantLogo,
     location: "Nairobi, Kenya",
     date: "2019 - 2021",
     description: [
@@ -48,6 +68,7 @@ export const experiences = [
     title: "Full Stack Software Engineer",
     company: "Andela",
     companyUrl: "https://www.linkedin.com/company/andela/",
+    companyLogo: andelaLogo,
     location: "Nairobi, Kenya",
     date: "2018 - 2019",
     description: [
@@ -61,6 +82,7 @@ export const experiences = [
     title: "Team Leader",
     company: "Sama",
     companyUrl: "https://www.linkedin.com/company/sama-ai/",
+    companyLogo: samaLogo,
     location: "Nairobi, Kenya",
     date: "2016 - 2018",
     description: [
@@ -75,6 +97,7 @@ export const experiences = [
     title: "Quality Analyst",
     company: "Sama",
     companyUrl: "https://www.linkedin.com/company/sama-ai/",
+    companyLogo: samaLogo,
     location: "Nairobi, Kenya",
     date: "2015 - 2016",
     description: [
@@ -88,6 +111,7 @@ export const experiences = [
     title: "Bachelor of Science in Information Technology",
     company: "Jomo Kenyatta University of Agriculture and Technology",
     companyUrl: "https://www.linkedin.com/school/jkuat/",
+    companyLogo: jkuatLogo,
     location: "Nairobi, Kenya",
     date: "2012 - 2015",
     description: [
@@ -103,7 +127,7 @@ export const portfolioProjects = [
   {
     title: "A link sharing app for developers",
     description:
-      "A fully-functional link-sharing app for developers. Developers can consolidate and share their links to different platforms with just one URL.",
+      "A fully-functional link-sharing app for developers. You can now consolidate and share your links to different platforms with just one URL.",
     image: devlinks,
     preview: "https://my-links-amber.vercel.app/",
     github: "https://github.com/jillo-abdullahi/my-links",

@@ -23,11 +23,11 @@ header {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   color: white;
   height: 100vh;
-  background-color: #455a64;
+  background-color: #0e0e0e;
   background: url("./static/images/icon-bg.svg") no-repeat center center;
   background-size: cover;
 }
@@ -125,7 +125,6 @@ header .landing-btn {
   padding-bottom: 1rem;
   position: absolute;
   bottom: 0;
-  background-color: #2f3847;
 }
 
 .sticky-header-navigation {
@@ -137,35 +136,15 @@ header .landing-btn {
   padding-bottom: 1rem;
   position: fixed;
   top: 0;
-  background-color: #2f3847;
 }
 
 .header-room {
   padding-top: 3rem !important;
 }
 
-.nav-content {
-  margin-bottom: 0 !important;
-}
-.navigation-link {
-  font-weight: 500;
-  font-size: 16px;
-  text-transform: uppercase;
-}
-
-.navigation-link:hover {
-  color: #e7a11a;
-}
-
-@media (max-width: 430px) {
-  .navigation-link {
-    font-size: 12px;
-  }
-}
-
 /*========= about section========= */
 
-#about-section {
+#about {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -227,7 +206,7 @@ header .landing-btn {
 
 /*==========stacks section =====*/
 
-#stacks-section {
+#stacks {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -265,7 +244,7 @@ header .landing-btn {
 
 /* =============Portfolio section =========== */
 
-#portfolio-section .content {
+#projects .content {
   padding-top: 30px;
 }
 
@@ -362,10 +341,10 @@ header .landing-btn {
   background-size: cover;
 }
 
-#contact-section .secondary-heading {
+#contact .secondary-heading {
   color: #e7a11a;
 }
-#contact-section .row {
+#contact .row {
   margin-bottom: 0;
 }
 
@@ -435,18 +414,12 @@ button[type="submit"]:focus {
 .links {
   display: flex;
   justify-content: center;
-  /* border-top: 2px solid #e7a11a; */
-  /* margin-top: 15px; */
-  margin-bottom: 1em;
-  padding: 13px;
   width: fit-content;
 }
 
 .profile-link {
   color: #bdbdbd;
-  padding: 5px;
   transition: all 0.1s ease-in-out;
-  margin: 5px;
 }
 
 .social-link {
@@ -535,23 +508,37 @@ footer {
   text-align: center;
 }
 
-/* src/WavingEmoji.css */
 .waving-emoji {
   display: inline-block;
-  font-size: 1.2rem; /* Adjust the size as needed */
+  font-size: 1.4rem;
   transform: rotate(50%); /* Slightly tilt the emoji to the left */
   animation: wave 2s infinite;
   transform-origin: 80% 80%; /* Adjust to make the wave look natural */
 }
 
 @keyframes wave {
-  0% { transform: rotate(-10deg); }
-  10% { transform: rotate(4deg); }
-  20% { transform: rotate(-18deg); }
-  30% { transform: rotate(4deg); }
-  40% { transform: rotate(-14deg); }
-  50% { transform: rotate(0deg); }
-  60% { transform: rotate(-10deg); }
-  100% { transform: rotate(-10deg); }
+  0% {
+    transform: rotate(-10deg);
+  }
+  10% {
+    transform: rotate(4deg);
+  }
+  20% {
+    transform: rotate(-18deg);
+  }
+  30% {
+    transform: rotate(4deg);
+  }
+  40% {
+    transform: rotate(-14deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
 }
-

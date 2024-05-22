@@ -1,42 +1,41 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faServer,
-  faDatabase,
-  faCloud,
-  faDesktop,
-} from "@fortawesome/free-solid-svg-icons";
+  ComputerDesktopIcon,
+  ServerStackIcon,
+  CircleStackIcon,
+  WrenchScrewdriverIcon,
+} from "@heroicons/react/24/outline";
 import { skills } from "../portfolioData";
 import { StackCard } from "./shared/stackCard";
 
 const Stacks = () => {
   return (
     <div className="content">
-      <div className="row">
-        <div className="front-end col s12 m6 l3">
+      <div className="grid grid-cols-12 gap-3">
+        <div className="col-span-12 md:col-span-6 lg:col-span-3">
           <StackCard
-            icon={<FontAwesomeIcon icon={faDesktop} className="icon" />}
+            icon={<ComputerDesktopIcon className="text-orange w-8 h-8" />}
             title="front-end"
             skills={skills.frontend}
           />
         </div>
-        <div className="back-end col s12 m6 l3">
+        <div className="col-span-12 md:col-span-6 lg:col-span-3">
           <StackCard
-            icon={<FontAwesomeIcon icon={faServer} className="icon" />}
+            icon={<ServerStackIcon className="text-orange w-8 h-8" />}
             title="back-end"
             skills={skills.backend}
           />
         </div>
-        <div className="database col s12 m6 l3">
+        <div className="col-span-12 md:col-span-6 lg:col-span-3">
           <StackCard
-            icon={<FontAwesomeIcon icon={faDatabase} className="icon" />}
+            icon={<CircleStackIcon className="text-orange w-8 h-8" />}
             title="databases"
             skills={skills.databases}
           />
         </div>
-        <div className="deployment col s12 m6 l3">
+        <div className="col-span-12 md:col-span-6 lg:col-span-3">
           <StackCard
-            icon={<FontAwesomeIcon icon={faCloud} className="icon" />}
+            icon={<WrenchScrewdriverIcon className="text-orange w-8 h-8" />}
             title="devops"
             skills={skills.devops}
           />

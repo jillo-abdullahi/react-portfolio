@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane, faSpinner } from "@fortawesome/free-solid-svg-icons";
-import M from "materialize-css";
 import emailjs from "emailjs-com";
 import { IconSend } from "@tabler/icons-react";
 

@@ -18,8 +18,8 @@ export const ProjectCard = ({ project }) => {
           )}
 
           <div className="title flex">
-            <h3 className="mb-5 text-orange featured-size font-semibold externals w-fit">
-              <a href={preview} target="_blank">
+            <h3 className="mb-5 text-orange text-xl font-semibold externals w-fit">
+              <a href={preview} target="_blank ">
                 {title}
               </a>
             </h3>
@@ -31,7 +31,7 @@ export const ProjectCard = ({ project }) => {
 
           <ul className="flex flex-wrap mt-[25px] mb-[10px] text-orange/90">
             {stacks.map((tech) => (
-              <li key={tech}>{tech}</li>
+              <li className="text-sm font-bold" key={tech}>{tech}</li>
             ))}
           </ul>
 
@@ -45,7 +45,7 @@ export const ProjectCard = ({ project }) => {
           <img
             src={image}
             alt=""
-            className="w-full object-cover rounded-xl border border-gray-700 hover:border-[#e7a11a60]"
+            className="w-full object-cover rounded-xl"
           />
         </a>
       </div>

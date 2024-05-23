@@ -17,7 +17,16 @@ export const AboutMeTimeline = () => {
     >
       {experiences.map(
         (
-          { type, title, company, companyUrl, companyLogo, date, location, description },
+          {
+            type,
+            title,
+            company,
+            companyUrl,
+            companyLogo,
+            date,
+            location,
+            description,
+          },
           index
         ) => (
           <VerticalTimelineElement
@@ -27,7 +36,7 @@ export const AboutMeTimeline = () => {
               background: "#272F3790",
               color: "#fff",
               borderRadius: "10px",
-              padding: "20px 30px",
+              padding: "20px 20px",
               boxShadow: "none",
               border: `1px solid ${type === "work" ? "#272F37" : "#e7a11a"}`,
             }}
@@ -43,16 +52,23 @@ export const AboutMeTimeline = () => {
           >
             <div className="timeLineContent text-left space-y-3">
               <div className="space-y-2">
-                <h3 className="font-bold text-xl text-orange/90">{title}</h3>
-                <h4 className="font-semibold text-orange/80 flex items-center justify-start">
+                <h3 className="font-semibold text-lg text-orange/90">{title}</h3>
+                <h4 className="font-medium text-sm sm:text-base text-orange/80 flex items-center justify-start">
                   <a
                     href={companyUrl}
                     target="_blank"
                     className="hover:underline flex items-center justify-start space-x-2"
                   >
-                    {companyLogo ? <img src={companyLogo} className="w-6 h-6 rounded-md" alt="logo" /> : null}<span>{company}</span>
+                    {companyLogo ? (
+                      <img
+                        src={companyLogo}
+                        className="w-6 h-6 rounded-md"
+                        alt="logo"
+                      />
+                    ) : null}
+                    <span>{company}</span>
                   </a>
-                  <span>&nbsp;- {location}</span>
+                  <span className="hidden sm:block">&nbsp;- {location}</span>
                 </h4>
               </div>
               <ul>

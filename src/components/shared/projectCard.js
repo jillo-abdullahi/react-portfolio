@@ -13,7 +13,7 @@ export const ProjectCard = ({ project }) => {
         <div>
           {!completed && (
             <div className="flex items-center justify-end mb-2">
-              <ProjectStatusBadge isProjectComplete={completed} />
+              <ProjectStatusBadge />
             </div>
           )}
 
@@ -30,8 +30,8 @@ export const ProjectCard = ({ project }) => {
           </div>
 
           <ul className="flex flex-wrap mt-[25px] mb-[10px] text-orange/90">
-            {stacks.map((tech) => (
-              <li className="text-sm font-bold" key={tech}>{tech}</li>
+            {stacks.map((tech, index) => (
+              <li className="text-sm font-medium" key={index}>{tech}</li>
             ))}
           </ul>
 

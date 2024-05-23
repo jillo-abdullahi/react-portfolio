@@ -155,6 +155,7 @@ header .landing-btn {
 /* overriding this here  */
 .dateStyle {
   opacity: 0.9 !important;
+  padding-bottom: 0px !important;
 }
 
 .timeLineContent ul > li {

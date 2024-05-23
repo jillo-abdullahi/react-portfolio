@@ -147,7 +147,7 @@ export const portfolioProjects = [
     completed: true,
   },
   {
-    title: "A real estate listing platform with a GraphQL-based API",
+    title: "A real estate listing platform",
     description:
       "An app that allows users to list properties for sale. User can register accounts, login, add, edit, and delete properties.",
     image: homestead,

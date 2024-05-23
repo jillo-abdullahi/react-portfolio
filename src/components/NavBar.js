@@ -70,12 +70,12 @@ export default function NavBarTest() {
                 <div className="flex-shrink-0">
                   <a
                     type="button"
-                    className="relative inline-flex uppercase items-center gap-x-1.5 rounded-md bg-orange px-3 py-2 text-sm font-semibold text-blue shadow-sm hover:bg-orange/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange/80 cursor-pointer"
+                    className="relative inline-flex uppercase items-center gap-x-1.5 rounded-md bg-orange px-3 py-2 text-sm font-semibold text-blue shadow-sm hover:bg-orange/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange/80 cursor-pointer group transition"
                     href={externalLinks.calLink}
                     target="_blank"
                   >
                     <CalendarDaysIcon
-                      className="-ml-0.5 h-5 w-5"
+                      className="-ml-0.5 h-5 w-5 group-hover:translate-x-0.5 transition origin-center duration-200"
                       aria-hidden="true"
                     />
                     <span>schedule call</span>
@@ -109,12 +109,12 @@ export default function NavBarTest() {
                   <div className="w-full text-center">
                     <a
                       type="button"
-                      className="relative inline-flex uppercase items-center gap-x-1.5 rounded-md bg-orange px-3 py-2 text-sm font-semibold text-blue shadow-sm hover:bg-orange/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange/80 cursor-pointer"
+                      className="relative inline-flex uppercase items-center gap-x-1.5 rounded-md bg-orange px-3 py-2 text-sm font-semibold text-blue shadow-sm hover:bg-orange/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange/80 cursor-pointer group transition"
                       href={externalLinks.calLink}
                       target="_blank"
                     >
                       <CalendarDaysIcon
-                        className="-ml-0.5 h-5 w-5"
+                        className="-ml-0.5 h-5 w-5 group-hover:translate-x-0.5 transition origin-center duration-200"
                         aria-hidden="true"
                       />
                       <span>schedule call</span>

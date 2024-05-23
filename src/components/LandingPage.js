@@ -1,11 +1,13 @@
 import React from "react";
-import { MapPinIcon, AcademicCapIcon } from "@heroicons/react/24/outline";
-import { faSmile } from "@fortawesome/free-solid-svg-icons";
-import { faUser } from "@fortawesome/free-regular-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  MapPinIcon,
+  AcademicCapIcon,
+  FaceSmileIcon,
+  CalendarDaysIcon,
+  EnvelopeIcon,
+} from "@heroicons/react/24/outline";
 import Stacks from "./Stacks";
 import { externalLinks } from "../portfolioData";
-import ContactForm from "./ContactForm";
 import ContactLinks from "./ContactLinks";
 import ProfileImage from "../static/images/me.webp";
 import { SectionHeading } from "./shared/sectionHeading";
@@ -54,7 +56,7 @@ const LandingPage = () => {
           </div>
 
           <div className="rounded-full bg-[#272F37] border border-gray-900 mt-2">
-            <ContactLinks links={externalLinks} showHeader={false} />
+            <ContactLinks />
           </div>
         </div>
       </header>
@@ -137,38 +139,56 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <section id="contact" className="contact">
+      <section id="contact" className="contact pb-10">
         <div className="pt-20">
-          <div className="mb-6">
+          <div className="mb-2">
             <SectionHeading
               heading={"Contact"}
               subHeading={"me"}
               id="contact"
             />
           </div>
-          <div className="w-full flex items-center justify-center pb-4">
+          <div className="w-full flex flex-col space-y-4 items-center justify-center pb-4">
             <div className="description w-full max-w-4xl">
-              <p className="text-base text-gray-200 text-center">
-                I would love to hear from you!{" "}
-                <FontAwesomeIcon icon={faSmile} className="text-orange" />
+              <p className="text-base text-gray-200 text-center flex items-center justify-center space-x-2">
+                <span>I would love to hear from you!</span>
+                <FaceSmileIcon className="text-orange w-5 h-5 inline" />
               </p>
             </div>
-          </div>
-        </div>
-        <div className="content">
-          <div className="row">
-            <div className="contacts-content col s12">
-              <ContactForm />
+            {/* button to send email and schedule call */}
+            <div className="flex items-center justify-start space-x-3">
+              <a
+                type="button"
+                className="relative inline-flex uppercase items-center gap-x-1.5 rounded-md bg-orange px-3 py-3 text-sm font-semibold text-blue shadow-sm hover:bg-orange/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange/80 cursor-pointer group transition"
+                href="mailto:jayloabdullahi@gmail.com"
+                target="_blank"
+              >
+                <EnvelopeIcon className="-ml-0.5 h-5 w-5 group-hover:translate-x-0.5 transition origin-center duration-200" aria-hidden="true" />
+                <span>email me</span>
+              </a>
+              <a
+                type="button"
+                className="relative inline-flex uppercase items-center gap-x-1.5 rounded-md bg-orange px-3 py-3 text-sm font-semibold text-blue shadow-sm hover:bg-orange/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange/80 cursor-pointer group transition"
+                href={externalLinks.calLink}
+                target="_blank"
+              >
+                <CalendarDaysIcon
+                  className="-ml-0.5 h-5 w-5 group-hover:translate-x-0.5 transition origin-center duration-200"
+                  aria-hidden="true"
+                />
+                <span>schedule call</span>
+              </a>
             </div>
           </div>
         </div>
-
-        <div className="content">
-          <div className="row">
-            <div className="contacts-content col s12">
-              <ContactMeForm />
-            </div>
+        <div className="content flex flex-col">
+          {/* divider  */}
+          <div class="relative flex py-5 items-center w-full max-w-2xl self-center">
+            <div class="flex-grow border-t border-gray-400"></div>
+            <span class="flex-shrink mx-4 text-gray-400 uppercase">or</span>
+            <div class="flex-grow border-t border-gray-400"></div>
           </div>
+          <ContactMeForm />
         </div>
       </section>
     </main>

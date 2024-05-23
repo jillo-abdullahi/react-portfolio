@@ -345,12 +345,6 @@ header .landing-btn {
   margin-bottom: 0;
 }
 
-.contacts-content {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 32px;
-}
-
 .contact-heading {
   font-size: 1.4rem;
   padding: 1rem 0;
@@ -364,24 +358,6 @@ header .landing-btn {
 
 label.active {
   color: #e7a11a !important;
-}
-
-input,
-textarea {
-  color: rgb(229 231 235) !important;
-}
-
-input:focus,
-textarea:focus {
-  border-bottom: 1px solid #e7a11a !important;
-  -webkit-box-shadow: 0 1px 0 0 #e7a11a !important;
-  box-shadow: 0 1px 0 0 #e7a11a !important;
-  color: rgb(229 231 235) !important;
-}
-
-input:active,
-textarea:active {
-  color: rgb(229 231 235) !important;
 }
 
 .submit-btn-section {

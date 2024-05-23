@@ -3,6 +3,7 @@ import {
   EnvelopeIcon,
   Square3Stack3DIcon,
   RocketLaunchIcon,
+  ChatBubbleBottomCenterTextIcon
 } from "@heroicons/react/24/outline";
 
 export const SectionHeading = ({ heading, subHeading, id }) => {
@@ -11,7 +12,7 @@ export const SectionHeading = ({ heading, subHeading, id }) => {
       {id === "about" ? (
         <UserCircleIcon className="w-6 h-6 text-orange" />
       ) : id === "contact" ? (
-        <EnvelopeIcon className="w-6 h-6 text-orange" />
+        <ChatBubbleBottomCenterTextIcon className="w-6 h-6 text-orange" />
       ) : id === "stack" ? (
         <Square3Stack3DIcon className="w-6 h-6 text-orange" />
       ) : id === "projects" ? (

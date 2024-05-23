@@ -4,21 +4,23 @@ import rockPaperScissors from "./static/images/portfolio/rockPaperScissors.png";
 import homestead from "./static/images/portfolio/homestead.png";
 import tstkpresale from "./static/images/portfolio/tstkpresale.png";
 import devlinks from "./static/images/portfolio/devlinks.png";
-import syndicateLogo from "./static/images/experience/syndicateLogo.jpeg"
-import iotaLogo from "./static/images/experience/iotaLogo.jpeg"
-import cellulantLogo from "./static/images/experience/cellulantLogo.jpeg"
-import andelaLogo from "./static/images/experience/andelaLogo.jpeg"
-import samaLogo from "./static/images/experience/samaLogo.jpeg"
-import jkuatLogo from "./static/images/experience/jkuatLogo.jpeg"
+import syndicateLogo from "./static/images/experience/syndicateLogo.jpeg";
+import iotaLogo from "./static/images/experience/iotaLogo.jpeg";
+import cellulantLogo from "./static/images/experience/cellulantLogo.jpeg";
+import andelaLogo from "./static/images/experience/andelaLogo.jpeg";
+import samaLogo from "./static/images/experience/samaLogo.jpeg";
+import jkuatLogo from "./static/images/experience/jkuatLogo.jpeg";
 
 export const externalLinks = {
   github: "https://github.com/jillo-abdullahi",
   linkedIn: "https://www.linkedin.com/in/jilloabdullahi/",
   twitter: "https://x.com/jillo_woche",
+  facebook: "https://www.facebook.com/jilloabdullah/",
+  stackoverflow: "https://stackoverflow.com/users/7300926/jillo-abdullahi",
   repositories: "https://github.com/jillo-abdullahi?tab=repositories",
-  calLink: "https://cal.com/jillowoche/15min"
+  instagram: "https://www.instagram.com/jillo_woche/",
+  calLink: "https://cal.com/jillowoche/15min",
 };
-
 
 export const experiences = [
   {

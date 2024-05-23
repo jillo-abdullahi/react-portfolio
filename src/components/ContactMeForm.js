@@ -1,4 +1,5 @@
 import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
+import { useToast } from "@chakra-ui/react";
 import emailjs from "emailjs-com";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,6 +14,20 @@ export default function ContactMeForm() {
   };
   const [formData, setFormData] = useState(initialFormData);
   const [loading, setLoading] = useState(false);
+  const toast = useToast();
+
+  // toast notification for message sent
+  const notify = ({ success, errorText }) =>
+    toast({
+      title: success ? "Your message was sent." : "Your message was not sent.",
+      description: success
+        ? "I'll be sure to get back to you ASAP!"
+        : `${errorText}. Please try again or send me an email directly.`,
+      status: success ? "success" : "error",
+      duration: 5000,
+      isClosable: true,
+      position: "bottom-right",
+    });
 
   const handleChange = (e) => {
     setFormData((prevState) => {
@@ -35,12 +50,13 @@ export default function ContactMeForm() {
         process.env.REACT_APP_PUBLIC_KEY
       )
       .then(
-        (response) => {
-          setFormData(initialFormData);
+        () => {
           setLoading(false);
+          notify({ success: true });
+          setFormData(initialFormData);
         },
         (error) => {
-          console.log({ error });
+          notify({ success: false, errorText: error.text });
           setLoading(false);
         }
       );
@@ -56,11 +72,12 @@ export default function ContactMeForm() {
                 type="text"
                 name="name"
                 id="name"
+                value={formData.name}
                 onChange={handleChange}
                 placeholder="Name"
                 required
                 autoComplete="given-name"
-                className="block w-full rounded-md border-0 bg-white/5 py-3 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-orange/90 font-bold sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 bg-white/5 py-3 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-orange/90 font-medium sm:text-sm sm:leading-6"
               />
             </div>
 
@@ -70,10 +87,11 @@ export default function ContactMeForm() {
                 name="email"
                 type="email"
                 placeholder="Email"
+                value={formData.email}
                 onChange={handleChange}
                 required
                 autoComplete="email"
-                className="block w-full rounded-md border-0 bg-white/5 py-3 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-orange/90 font-bold sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 bg-white/5 py-3 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-orange/90 font-medium sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -82,11 +100,12 @@ export default function ContactMeForm() {
             <textarea
               id="message"
               name="message"
+              value={formData.message}
               onChange={handleChange}
               required
               rows={5}
               placeholder="Your message"
-              className="block w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-orange/90 font-bold sm:text-sm sm:leading-6"
+              className="block w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-orange/90 font-medium sm:text-sm sm:leading-6"
               defaultValue={""}
             />
           </div>

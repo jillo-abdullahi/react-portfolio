@@ -94,7 +94,7 @@ const LandingPage = () => {
         <div className="mb-6 mt-20">
           <SectionHeading heading={"My"} subHeading={"tech stack"} id="stack" />
         </div>
-        <div className="description w-full max-w-4xl">
+        <div className="description w-full max-w-4xl pb-2">
           <p className="text-base text-gray-200 text-center">
             I work hard to improve my skills regularly.
           </p>
@@ -113,7 +113,7 @@ const LandingPage = () => {
           </div>
           <div className="w-full flex items-center justify-center">
             <div className="description w-full max-w-4xl">
-              <p className="text-base text-gray-200 text-center">
+              <p className="text-base text-gray-200 text-center px-5">
                 Here are some of my projects. For a full list, please check out
                 my{" "}
                 <a

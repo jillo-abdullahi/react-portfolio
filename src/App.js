@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 import LandingPage from "./components/LandingPage";
 import NotFound from "./components/NotFound";
-import theme from './theme'
+import theme from "./theme";
 class App extends Component {
   render() {
     return (

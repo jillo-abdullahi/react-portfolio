@@ -20,11 +20,11 @@ const navigation = [
   { name: "Contact", href: "#contact" },
 ];
 
-export default function NavBarTest() {
+export default function NavBar() {
   return (
     <Disclosure
       as="nav"
-      className="bg-[#272F37] border border-gray-900 rounded-xl mx-6 z-50 fixed right-0 lg:right-10 left-0 lg:left-10 h-16"
+      className="bg-[#272F37] border border-gray-900 rounded-xl mx-6 z-50 fixed right-0 lg:right-10 left-0 lg:left-10 h-16 slideInFromTop"
     >
       {({ open }) => (
         <>

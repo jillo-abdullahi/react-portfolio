@@ -55,7 +55,7 @@ const LandingPage = () => {
             </div>
           </div>
 
-          <div className="rounded-full bg-[#272F37] border border-gray-900 mt-2">
+          <div className="rounded-full bg-[#272F37] border border-gray-900 mt-2 fadeIn">
             <ContactLinks />
           </div>
         </div>
@@ -139,7 +139,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <section id="contact" className="contact pb-10">
+      <section id="contact" className="contact pb-10 withBubblesBackground">
         <div className="pt-20">
           <div className="mb-2">
             <SectionHeading

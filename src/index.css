@@ -32,7 +32,7 @@ header {
   background-size: cover;
 }
 
-@keyframes header {
+@keyframes fadeIn {
   from {
     opacity: 0;
   }
@@ -41,10 +41,35 @@ header {
   }
 }
 
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-100%); /* Start above the viewport */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End at the original position */
+  }
+}
+
+.withBubblesBackground {
+  background-color: #0e0e0e;
+  background: url("./static/images/icon-bg.svg") no-repeat center center;
+  background-size: cover;
+}
+
+.slideInFromTop {
+  animation: slideInFromTop 0.5s;
+}
+
+.fadeIn {
+  animation: fadeIn 2s;
+}
+
 .header-title,
 .header-button {
   text-align: center;
-  animation: header 3s;
+  animation: fadeIn 3s;
 }
 
 .header-buttons {
@@ -88,7 +113,7 @@ header {
 
 header .landing-btn {
   width: 160px;
-  animation: header 3s;
+  animation: fadeIn 3s;
   font-size: 14px;
 }
 
@@ -332,19 +357,6 @@ header .landing-btn {
 }
 
 /* ============ contact section =========== */
-.contact {
-  color: #bdbdbd;
-  background: url("./static/images/footer-background.webp") no-repeat center
-    center;
-  background-size: cover;
-}
-
-#contact .secondary-heading {
-  color: #e7a11a;
-}
-#contact .row {
-  margin-bottom: 0;
-}
 
 .contact-heading {
   font-size: 1.4rem;

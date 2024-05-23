@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@fontsource-variable/exo": "^5.0.19",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-regular-svg-icons": "^6.5.2",
@@ -17,6 +21,7 @@
     "firebase": "^9.17.2",
     "firebase-admin": "^11.5.0",
     "firebase-tools": "^11.24.0",
+    "framer-motion": "^11.2.6",
     "glamor": "^2.20.40",
     "nodemailer": "^6.3.0",
     "react": "^18.3.1",

@@ -1,5 +1,7 @@
 import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
 import emailjs from "emailjs-com";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import ContactLinks from "./ContactLinks";
 
@@ -35,9 +37,11 @@ export default function ContactMeForm() {
       .then(
         (response) => {
           setFormData(initialFormData);
+          setLoading(false);
         },
         (error) => {
           console.log({ error });
+          setLoading(false);
         }
       );
   };
@@ -90,10 +94,21 @@ export default function ContactMeForm() {
           <div className="mt-6 flex items-center justify-end gap-x-6">
             <button
               type="submit"
-              className="rounded-md bg-orange px-3 py-3 text-base font-semibold shadow-sm hover:bg-orange/90 focus-visible:outline text-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange/90 flex items-center justify-center space-x-2 w-full mt-0.5"
+              className={`rounded-md px-3 py-3 text-base font-semibold shadow-sm flex items-center justify-center space-x-2 w-full mt-0.5 transition duration-200 group ${
+                loading
+                  ? "cursor-not-allowed bg-orange/90 hover:bg-orange/90"
+                  : "hover:bg-orange/90 focus-visible:outline text-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange/90 bg-orange"
+              }`}
+              disabled={loading}
             >
-              <PaperAirplaneIcon className="text-blue w-4 h-4" />
-              <span>Send your message</span>
+              {loading ? (
+                <FontAwesomeIcon icon={faSpinner} spin />
+              ) : (
+                <PaperAirplaneIcon className="text-blue w-4 h-4 group-hover:translate-x-0.5 transition origin-center duration-200" />
+              )}
+              <span>
+                {loading ? "Sending your message..." : "Send your message"}
+              </span>
             </button>
           </div>
         </div>

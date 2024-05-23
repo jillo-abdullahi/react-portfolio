@@ -36,16 +36,16 @@ const LandingPage = () => {
             <div className="flex flex-col items-center space-y-2 content justify-center">
               <div className="flex items-center space-x-1">
                 <WavingHand />
-                <span className="text-2xl text-gray-200 font-normal">
+                <span className="text-2xl text-gray-200 font-medium">
                   Hello, I am
                 </span>
               </div>
 
-              <span className="text-5xl text-orange font-bold">
+              <span className="text-5xl text-orange font-semibold">
                 Jillo Woche
               </span>
               <hr className="bg-orange border border-orange w-64" />
-              <span className="font-bold pt-2 text-2xl text-gray-200">
+              <span className="font-semibold pt-2 text-2xl text-gray-200">
                 Full Stack Software Engineer
               </span>
               <span className="flex items-center justify-center space-x-1">
@@ -183,10 +183,10 @@ const LandingPage = () => {
         </div>
         <div className="content flex flex-col">
           {/* divider  */}
-          <div class="relative flex py-5 items-center w-full max-w-2xl self-center">
-            <div class="flex-grow border-t border-gray-400"></div>
-            <span class="flex-shrink mx-4 text-gray-400 uppercase">or</span>
-            <div class="flex-grow border-t border-gray-400"></div>
+          <div className="relative flex py-5 items-center w-full max-w-2xl self-center">
+            <div className="flex-grow border-t border-gray-400"></div>
+            <span className="flex-shrink mx-4 text-gray-400 uppercase">or</span>
+            <div className="flex-grow border-t border-gray-400"></div>
           </div>
           <ContactMeForm />
         </div>

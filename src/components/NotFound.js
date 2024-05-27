@@ -1,7 +1,6 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal";
 import { HomeIcon } from "@heroicons/react/24/outline";
-import { SlideMeIn } from "../components/shared/slideMeIn";
 import ImageNotFound from "../static/images/notFound.svg";
 
 const NotFound = () => {

@@ -10,6 +10,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { externalLinks } from "../portfolioData";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { SlideMeIn } from "./shared/slideMeIn";
 
 const ContactLinks = ({ isInFooter }) => {
   const { linkedIn, github, twitter, facebook, stackoverflow, instagram } =
@@ -48,7 +49,7 @@ const ContactLinks = ({ isInFooter }) => {
   const FooterLinkBox = ({ icon, href, name }) => {
     return (
       <a
-        className="w-full sm:w-64 rounded-lg border border-gray-800 bg-[#272F3790] hover:bg-[#272F37] flex items-center justify-between group cursor-pointer p-2 transition duration-300"
+        className="w-full sm:w-64 rounded-lg border border-gray-900 bg-[#272F3790] hover:bg-[#272F37] flex items-center justify-between group cursor-pointer p-2 transition duration-300"
         href={href}
         target="_blank"
       >
@@ -74,7 +75,9 @@ const ContactLinks = ({ isInFooter }) => {
     <div className="flex flex-col space-y-2 w-full">
       {footerSocialLinks.map(({ icon, href, name }, index) => {
         return (
-          <FooterLinkBox icon={icon} href={href} key={index} name={name} />
+          <SlideMeIn>
+            <FooterLinkBox icon={icon} href={href} key={index} name={name} />
+          </SlideMeIn>
         );
       })}
     </div>

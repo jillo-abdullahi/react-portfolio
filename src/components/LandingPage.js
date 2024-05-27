@@ -6,6 +6,7 @@ import {
   CalendarDaysIcon,
   EnvelopeIcon,
 } from "@heroicons/react/24/outline";
+import { SlideMeIn } from "./shared/slideMeIn";
 import Stacks from "./Stacks";
 import { externalLinks } from "../portfolioData";
 import ContactLinks from "./ContactLinks";
@@ -60,6 +61,8 @@ const LandingPage = () => {
           </div>
         </div>
       </header>
+
+      {/* About me section  */}
       <section id="about" className="bg-[#353D45]">
         <div className="mb-6 mt-20">
           <SectionHeading heading={"About"} subHeading={"me"} id="about" />
@@ -67,22 +70,27 @@ const LandingPage = () => {
 
         <div className="content">
           <div className="flex flex-col space-y-10 items-center w-full">
-            <div className="description w-full max-w-4xl">
-              <p className="text-base text-gray-200">
-                Innovative Full Stack Software Engineer with a keen eye for
-                detail and a commitment to continuous learning. Armed with a
-                solid foundation in both front-end and back-end development, I
-                thrive on tackling complex challenges and delivering elegant
-                solutions within the web2 and web3 space.
-              </p>
-            </div>
-            <div className="flex flex-col space-y-2">
-              <div className="flex items-center justify-center space-x-2">
-                <AcademicCapIcon className="w-6 h-6 text-orange" />
-                <h3 className="text-orange text-xl font-semibold">
-                  Education and work experience
-                </h3>
+            <SlideMeIn direction="up" triggerOnce>
+              <div className="description w-full max-w-4xl">
+                <p className="text-base text-gray-200">
+                  Innovative Full Stack Software Engineer with a keen eye for
+                  detail and a commitment to continuous learning. Armed with a
+                  solid foundation in both front-end and back-end development, I
+                  thrive on tackling complex challenges and delivering elegant
+                  solutions within the web2 and web3 space.
+                </p>
               </div>
+            </SlideMeIn>
+
+            <div className="flex flex-col space-y-2">
+              <SlideMeIn direction="up" triggerOnce>
+                <div className="flex items-center justify-center space-x-2">
+                  <AcademicCapIcon className="w-6 h-6 text-orange" />
+                  <h3 className="text-orange text-xl font-semibold">
+                    Education and work experience
+                  </h3>
+                </div>
+              </SlideMeIn>
 
               <AboutMeTimeline />
             </div>
@@ -90,18 +98,22 @@ const LandingPage = () => {
         </div>
       </section>
 
+      {/* Stacks section  */}
       <section id="stacks" className="pb-12">
         <div className="mb-6 mt-20">
           <SectionHeading heading={"My"} subHeading={"tech stack"} id="stack" />
         </div>
-        <div className="description w-full max-w-4xl pb-2">
-          <p className="text-base text-gray-200 text-center">
-            I work hard to improve my skills regularly.
-          </p>
-        </div>
+        <SlideMeIn>
+          <div className="description w-full max-w-4xl pb-2">
+            <p className="text-base text-gray-200 text-center">
+              I work hard to improve my skills regularly.
+            </p>
+          </div>
+        </SlideMeIn>
         <Stacks />
       </section>
 
+      {/* projects section  */}
       <section id="projects" className="bg-[#353D45] pb-12">
         <div className="pt-20">
           <div className="mb-6">
@@ -112,33 +124,37 @@ const LandingPage = () => {
             />
           </div>
           <div className="w-full flex items-center justify-center">
-            <div className="description w-full max-w-4xl">
-              <p className="text-base text-gray-200 text-center px-5">
-                Here are some of my projects. For a full list, please check out
-                my{" "}
-                <a
-                  href={externalLinks.repositories}
-                  className="text-orange hover:underline"
-                  target="_blank"
-                >
-                  Github
-                </a>{" "}
-                profile.
-              </p>
-            </div>
+            <SlideMeIn>
+              <div className="description w-full max-w-4xl">
+                <p className="text-base text-gray-200 text-center px-5">
+                  Here are some of my projects. For a full list, please check
+                  out my{" "}
+                  <a
+                    href={externalLinks.repositories}
+                    className="text-orange hover:underline"
+                    target="_blank"
+                  >
+                    Github
+                  </a>{" "}
+                  profile.
+                </p>
+              </div>
+            </SlideMeIn>
           </div>
         </div>
 
         <div className="content">
-          {/* projects  */}
           <ul className="space-y-12">
             {portfolioProjects.map((project, index) => (
-              <ProjectCard key={index} project={project} />
+              <SlideMeIn cascade={true}>
+                <ProjectCard key={index} project={project} />
+              </SlideMeIn>
             ))}
           </ul>
         </div>
       </section>
 
+      {/* contact section  */}
       <section id="contact" className="contact pb-10 withBubblesBackground">
         <div className="pt-20">
           <div className="mb-2">
@@ -149,46 +165,66 @@ const LandingPage = () => {
             />
           </div>
           <div className="w-full flex flex-col space-y-4 items-center justify-center pb-4">
-            <div className="description w-full max-w-4xl">
-              <p className="text-base text-gray-200 text-center flex items-center justify-center space-x-2">
-                <span>I would love to hear from you!</span>
-                <FaceSmileIcon className="text-orange w-5 h-5 inline" />
-              </p>
-            </div>
+            <SlideMeIn>
+              <div className="description w-full max-w-4xl">
+                <p className="text-base text-gray-200 text-center flex items-center justify-center space-x-2">
+                  <span>I would love to hear from you!</span>
+                  <FaceSmileIcon className="text-orange w-5 h-5 inline" />
+                </p>
+              </div>
+            </SlideMeIn>
             {/* button to send email and schedule call */}
-            <div className="flex items-center justify-start space-x-3">
-              <a
-                type="button"
-                className="relative inline-flex uppercase items-center gap-x-1.5 rounded-md bg-orange px-3 py-3 text-sm font-semibold text-blue shadow-sm hover:bg-orange/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange/80 cursor-pointer group transition"
-                href="mailto:jayloabdullahi@gmail.com"
-                target="_blank"
-              >
-                <EnvelopeIcon className="-ml-0.5 h-5 w-5 group-hover:translate-x-0.5 transition origin-center duration-200" aria-hidden="true" />
-                <span>email me</span>
-              </a>
-              <a
-                type="button"
-                className="relative inline-flex uppercase items-center gap-x-1.5 rounded-md bg-orange px-3 py-3 text-sm font-semibold text-blue shadow-sm hover:bg-orange/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange/80 cursor-pointer group transition"
-                href={externalLinks.calLink}
-                target="_blank"
-              >
-                <CalendarDaysIcon
-                  className="-ml-0.5 h-5 w-5 group-hover:translate-x-0.5 transition origin-center duration-200"
-                  aria-hidden="true"
-                />
-                <span>schedule call</span>
-              </a>
-            </div>
+            <SlideMeIn>
+              <div className="flex items-center justify-start space-x-3">
+                <a
+                  type="button"
+                  className="relative inline-flex uppercase items-center gap-x-1.5 rounded-md bg-orange px-3 py-3 text-sm font-semibold text-blue shadow-sm hover:bg-orange/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange/80 cursor-pointer group transition"
+                  href="mailto:jayloabdullahi@gmail.com"
+                  target="_blank"
+                >
+                  <EnvelopeIcon
+                    className="-ml-0.5 h-5 w-5 group-hover:translate-x-0.5 transition origin-center duration-200"
+                    aria-hidden="true"
+                  />
+                  <span>email me</span>
+                </a>
+                <a
+                  type="button"
+                  className="relative inline-flex uppercase items-center gap-x-1.5 rounded-md bg-orange px-3 py-3 text-sm font-semibold text-blue shadow-sm hover:bg-orange/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange/80 cursor-pointer group transition"
+                  href={externalLinks.calLink}
+                  target="_blank"
+                >
+                  <CalendarDaysIcon
+                    className="-ml-0.5 h-5 w-5 group-hover:translate-x-0.5 transition origin-center duration-200"
+                    aria-hidden="true"
+                  />
+                  <span>schedule call</span>
+                </a>
+              </div>
+            </SlideMeIn>
           </div>
         </div>
+
         <div className="content flex flex-col">
           {/* divider  */}
-          <div className="relative flex py-5 items-center w-full max-w-2xl self-center">
-            <div className="flex-grow border-t border-gray-400"></div>
-            <span className="flex-shrink mx-4 text-gray-400 uppercase">or</span>
-            <div className="flex-grow border-t border-gray-400"></div>
-          </div>
-          <ContactMeForm />
+          <SlideMeIn
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <div className="relative flex py-5 items-center w-full max-w-2xl self-center">
+              <div className="flex-grow border-t border-gray-400"></div>
+              <span className="flex-shrink mx-4 text-gray-400 uppercase">
+                or
+              </span>
+              <div className="flex-grow border-t border-gray-400"></div>
+            </div>
+          </SlideMeIn>
+          <SlideMeIn>
+            <ContactMeForm />
+          </SlideMeIn>
         </div>
       </section>
     </main>

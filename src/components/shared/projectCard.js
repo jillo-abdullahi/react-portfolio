@@ -25,7 +25,7 @@ export const ProjectCard = ({ project }) => {
             </h3>
           </div>
 
-          <div className="text-gray-200 p-[25px] border border-gray-800 rounded-xl bg-[#272F3790]">
+          <div className="text-gray-200 p-[25px] border border-gray-900 rounded-xl bg-[#272F3790]">
             <p>{description}</p>
           </div>
 

@@ -10,8 +10,10 @@ import {
   XMarkIcon,
   CalendarDaysIcon,
 } from "@heroicons/react/24/outline";
+import { useState, useEffect } from "react";
 import WorkAvailabilityIndicator from "./WorkAvailabilityIndicator";
 import { externalLinks } from "../portfolioData";
+import Timer from "./Timer";
 
 const navigation = [
   { name: "About", href: "#about" },
@@ -21,14 +23,34 @@ const navigation = [
 ];
 
 export default function NavBar() {
+  const [scrollOffset, setScrollOffset] = useState(0);
+  const [isScrolledPast100vh, setIsScrolledPast100vh] = useState(false);
+
+  const handleScroll = () => {
+    const currentScrollOffset = window.scrollY;
+    const viewportHeight = window.innerHeight;
+    setIsScrolledPast100vh(currentScrollOffset > viewportHeight);
+    setScrollOffset(currentScrollOffset);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <Disclosure
       as="nav"
-      className="bg-[#272F37] border border-gray-900 rounded-xl mx-6 z-50 fixed right-0 lg:right-10 left-0 lg:left-10 h-16 slideInFromTop"
+      className={`bg-[#272F37] border border-gray-900 rounded-xl mx-6 z-50 fixed right-0 lg:right-10 left-0 lg:left-10 h-16 slideInFromTop transition-all duration-200 ${
+        scrollOffset > 0 ? "mt-2" : "mt-4"
+      }`}
     >
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl md:pl-4 md:pr-3 pl-2 md:px-4">
+          <div className="mx-auto max-w-7xl md:pl-4 md:pr-3 pl-2 md:px-4 relative">
             <div className="flex h-16 justify-between">
               <div className="flex flex-row-reverse md:flex-row items-center justify-between w-full md:w-fit">
                 <div className="-ml-2 mr-2 flex items-center lg:hidden">
@@ -83,6 +105,13 @@ export default function NavBar() {
                 </div>
               </div>
             </div>
+            {
+              <div
+                className={`absolute right-0 -bottom-12 hidden md:flex items-center justify-center space-y-0 w-52 bg-[#353D45]/80 border border-gray-900 p-2 rounded-xl`}
+              >
+                <Timer />
+              </div>
+            }
           </div>
           <Transition
             enter="duration-300 ease-out"
@@ -104,22 +133,26 @@ export default function NavBar() {
                     {item.name}
                   </DisclosureButton>
                 ))}
-                <div className="py-4 w-full flex-col items-center justify-center space-y-2 md:hidden">
-                  <WorkAvailabilityIndicator />
-                  <div className="w-full text-center">
-                    <a
-                      type="button"
-                      className="relative inline-flex uppercase items-center gap-x-1.5 rounded-md bg-orange px-3 py-2 text-sm font-semibold text-blue shadow-sm hover:bg-orange/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange/80 cursor-pointer group transition"
-                      href={externalLinks.calLink}
-                      target="_blank"
-                    >
-                      <CalendarDaysIcon
-                        className="-ml-0.5 h-5 w-5 group-hover:translate-x-0.5 transition origin-center duration-200"
-                        aria-hidden="true"
-                      />
-                      <span>schedule call</span>
-                    </a>
+                <div className="flex py-3 w-full flex-col items-center justify-center space-y-4 md:hidden">
+                  <div className="flex flex-col items-center justify-center space-y-2">
+                    <WorkAvailabilityIndicator />
+                    <div className="w-full text-center">
+                      <a
+                        type="button"
+                        className="relative inline-flex uppercase items-center gap-x-1.5 rounded-md bg-orange px-3 py-2 text-sm font-semibold text-blue shadow-sm hover:bg-orange/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange/80 cursor-pointer group transition"
+                        href={externalLinks.calLink}
+                        target="_blank"
+                      >
+                        <CalendarDaysIcon
+                          className="-ml-0.5 h-5 w-5 group-hover:translate-x-0.5 transition origin-center duration-200"
+                          aria-hidden="true"
+                        />
+                        <span>schedule call</span>
+                      </a>
+                    </div>
                   </div>
+
+                  <Timer />
                 </div>
               </div>
             </DisclosurePanel>

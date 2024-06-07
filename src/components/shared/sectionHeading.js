@@ -20,7 +20,7 @@ export const SectionHeading = ({ heading, subHeading, id }) => {
         ) : id === "projects" ? (
           <RocketLaunchIcon className="w-6 h-6 text-orange" />
         ) : null}
-        <h2 className="font-bold text-2xl text-gray-200">
+        <h2 className="font-semibold text-2xl text-gray-200">
           {heading} {subHeading}
         </h2>
       </div>

@@ -58,7 +58,7 @@ const ContactLinks = ({ isInFooter }) => {
             <FontAwesomeIcon
               icon={icon}
               style={{ fontSize: "24px" }}
-              className="text-gray-200 transition"
+              className="text-gray-300 transition"
             />
           </div>
           <div className="text-left">
@@ -75,8 +75,8 @@ const ContactLinks = ({ isInFooter }) => {
     <div className="flex flex-col space-y-2 w-full">
       {footerSocialLinks.map(({ icon, href, name }, index) => {
         return (
-          <SlideMeIn>
-            <FooterLinkBox icon={icon} href={href} key={index} name={name} />
+          <SlideMeIn key={index}>
+            <FooterLinkBox icon={icon} href={href}  name={name} />
           </SlideMeIn>
         );
       })}
@@ -87,7 +87,7 @@ const ContactLinks = ({ isInFooter }) => {
     <div className="flex items-center justify-center space-x-3 px-3 py-2">
       {socialLinks.map(({ icon, href }, index) => (
         <a
-          className="text-white hover:text-orange transition-all duration-150"
+          className="text-gray-300 hover:text-orange transition-all duration-150 flex"
           href={href}
           target="_blank"
           rel="noopener noreferrer"

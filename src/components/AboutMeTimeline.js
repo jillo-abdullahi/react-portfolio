@@ -1,25 +1,12 @@
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
 import { SlideMeIn } from "./shared/slideMeIn";
-import { ReactComponent as WorkIcon } from "../static/images/icon-work.svg";
-import { ReactComponent as SchoolIcon } from "../static/images/icon-school.svg";
-import { ReactComponent as StarIcon } from "../static/images/icon-star.svg";
 import { experiences } from "../portfolioData";
 
 export const AboutMeTimeline = () => {
   return (
-    <VerticalTimeline
-      layout="1-column-left"
-      animate={false}
-      lineColor="rgb(229 231 235)"
-    >
+    <div className="flex flex-col space-y-6">
       {experiences.map(
         (
           {
-            type,
             title,
             company,
             companyUrl,
@@ -27,31 +14,15 @@ export const AboutMeTimeline = () => {
             date,
             location,
             description,
+            isCurrent,
           },
           index
         ) => (
-          <SlideMeIn cascade={true}>
-            <VerticalTimelineElement
-              key={index}
-              className="vertical-timeline-element--work"
-              contentStyle={{
-                background: "#272F3790",
-                color: "#fff",
-                borderRadius: "10px",
-                padding: "20px 20px",
-                marginBottom: "14px",
-                boxShadow: "none",
-                border: `1px solid ${type === "work" ? "#272F37" : "#e7a11a"}`,
-              }}
-              contentArrowStyle={{
-                borderRight: `7px solid  ${
-                  type === "work" ? "#272F3790" : "#e7a11a90"
-                }`,
-              }}
-              iconStyle={{ background: "#e7a11a", color: "#fff" }}
-              date={date}
-              dateClassName="text-orange/100 dateStyle"
-              icon={type === "work" ? <WorkIcon /> : <SchoolIcon />}
+          <SlideMeIn cascade={true} key={index}>
+            <div
+              className={`border bg-[#272f3790] text-white rounded-xl py-5 px-6 ${
+                isCurrent ? "border-orange" : "border-gray-900"
+              }`}
             >
               <div className="timeLineContent text-left space-y-3">
                 <div className="space-y-2">
@@ -83,16 +54,12 @@ export const AboutMeTimeline = () => {
                     </li>
                   ))}
                 </ul>
+                <div className="text-orange/90 text-sm">{date}</div>
               </div>
-            </VerticalTimelineElement>
+            </div>
           </SlideMeIn>
         )
       )}
-
-      <VerticalTimelineElement
-        iconStyle={{ background: "#272F37", color: "#fff" }}
-        icon={<StarIcon />}
-      />
-    </VerticalTimeline>
+    </div>
   );
 };

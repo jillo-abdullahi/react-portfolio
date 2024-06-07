@@ -176,13 +176,6 @@ header .landing-btn {
   justify-content: center;
 }
 
-/* default styling for timeline component forces date to have .7 opacity  */
-/* overriding this here  */
-.dateStyle {
-  opacity: 0.9 !important;
-  padding-bottom: 0px !important;
-}
-
 .timeLineContent ul > li {
   list-style: disc !important;
 }

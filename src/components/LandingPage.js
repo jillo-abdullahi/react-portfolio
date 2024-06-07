@@ -1,10 +1,10 @@
 import React from "react";
 import {
-  MapPinIcon,
   AcademicCapIcon,
   FaceSmileIcon,
   CalendarDaysIcon,
   EnvelopeIcon,
+  MapPinIcon,
 } from "@heroicons/react/24/outline";
 import { SlideMeIn } from "./shared/slideMeIn";
 import Stacks from "./Stacks";
@@ -23,10 +23,10 @@ const LandingPage = () => {
   return (
     <main>
       <header id="home">
-        <div className="h-[10%] pt-4 w-full max-w-7xl">
+        <div className="h-[10%] w-full max-w-7xl">
           <NavBar />
         </div>
-        <div className="h-[90%] flex flex-col items-center justify-center">
+        <div className="h-[90%] flex flex-col items-center justify-center relative w-full max-w-7xl">
           <div className="flex flex-col space-y-8 items-center header-title">
             <div className="rounded-full bg-transparent border-8 border-[#E7A11A78]">
               <div className="profile-img">
@@ -37,26 +37,26 @@ const LandingPage = () => {
             <div className="flex flex-col items-center space-y-2 content justify-center">
               <div className="flex items-center space-x-1">
                 <WavingHand />
-                <span className="text-2xl text-gray-200 font-medium">
+                <span className="text-2xl text-gray-300 font-medium">
                   Hello, I am
                 </span>
               </div>
 
-              <span className="text-5xl text-orange font-semibold">
+              <span className="text-4xl text-orange font-semibold">
                 Jillo Woche
               </span>
-              <hr className="bg-orange border border-orange w-64" />
-              <span className="font-semibold pt-2 text-2xl text-gray-200">
+              <hr className="bg-orange border border-orange w-56" />
+              <span className="font-medium pt-2 text-xl text-gray-300">
                 Full Stack Software Engineer
               </span>
-              <span className="flex items-center justify-center space-x-1">
+              <div className="flex items-center justify-center space-x-1">
                 <MapPinIcon className="text-orange h-4 w-4" />{" "}
-                <span className="text-sm text-white">Nairobi, Kenya</span>
-              </span>
+                <span className="text-sm text-gray-300">Nairobi, Kenya</span>
+              </div>
             </div>
           </div>
 
-          <div className="rounded-full bg-[#272F37] border border-gray-900 mt-2 fadeIn">
+          <div className="rounded-full bg-[#353D45] border border-gray-800 mt-3 fadeIn">
             <ContactLinks />
           </div>
         </div>
@@ -82,11 +82,11 @@ const LandingPage = () => {
               </div>
             </SlideMeIn>
 
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-2 pb-12">
               <SlideMeIn direction="up" triggerOnce>
-                <div className="flex items-center justify-center space-x-2">
+                <div className="flex items-center justify-center space-x-2 mb-3">
                   <AcademicCapIcon className="w-6 h-6 text-orange" />
-                  <h3 className="text-orange text-xl font-semibold">
+                  <h3 className="text-orange text-lg font-normal">
                     Education and work experience
                   </h3>
                 </div>
@@ -146,8 +146,8 @@ const LandingPage = () => {
         <div className="content">
           <ul className="space-y-12">
             {portfolioProjects.map((project, index) => (
-              <SlideMeIn cascade={true}>
-                <ProjectCard key={index} project={project} />
+              <SlideMeIn cascade={true} key={index}>
+                <ProjectCard project={project} />
               </SlideMeIn>
             ))}
           </ul>

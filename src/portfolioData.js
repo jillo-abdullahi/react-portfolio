@@ -10,6 +10,7 @@ import cellulantLogo from "./static/images/experience/cellulantLogo.jpeg";
 import andelaLogo from "./static/images/experience/andelaLogo.jpeg";
 import samaLogo from "./static/images/experience/samaLogo.jpeg";
 import jkuatLogo from "./static/images/experience/jkuatLogo.jpeg";
+import gashawkLogo from "./static/images/experience/gashawkLogo.jpeg";
 
 export const externalLinks = {
   github: "https://github.com/jillo-abdullahi",
@@ -24,6 +25,21 @@ export const externalLinks = {
 
 export const experiences = [
   {
+    isCurrent: true,
+    type: "work",
+    title: "Full Stack Software Engineer",
+    company: "GasHawk",
+    companyUrl: "https://www.linkedin.com/company/gashawk/",
+    companyLogo: gashawkLogo,
+    location: "Remote, Global",
+    date: "2024 - present",
+    description: [
+      "Currently writing robust backend and frontend code to make living on-chain more efficient, safe, and secure.",
+      "GasHawk is saving retails and institutions up to 95% on gas fees on Ethereum and OP Mainnet.",
+    ],
+  },
+  {
+    isCurrent: false,
     type: "work",
     title: "Full Stack Software Engineer",
     company: "IOTA",
@@ -37,6 +53,7 @@ export const experiences = [
     ],
   },
   {
+    isCurrent: false,
     type: "work",
     title: "Full Stack Software Engineer",
     company: "Syndicate",
@@ -52,6 +69,7 @@ export const experiences = [
     ],
   },
   {
+    isCurrent: false,
     type: "work",
     title: "Front-end Software Engineer",
     company: "Cellulant",
@@ -66,6 +84,7 @@ export const experiences = [
     ],
   },
   {
+    isCurrent: false,
     type: "work",
     title: "Full Stack Software Engineer",
     company: "Andela",
@@ -80,6 +99,7 @@ export const experiences = [
     ],
   },
   {
+    isCurrent: false,
     type: "work",
     title: "Team Leader",
     company: "Sama",
@@ -95,6 +115,7 @@ export const experiences = [
     ],
   },
   {
+    isCurrent: false,
     type: "work",
     title: "Quality Analyst",
     company: "Sama",
@@ -109,6 +130,7 @@ export const experiences = [
     ],
   },
   {
+    isCurrent: false,
     type: "education",
     title: "Bachelor of Science in Information Technology",
     company: "Jomo Kenyatta University of Agriculture and Technology",

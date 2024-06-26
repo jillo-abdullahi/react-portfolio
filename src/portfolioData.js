@@ -15,7 +15,7 @@ import gashawkLogo from "./static/images/experience/gashawkLogo.jpeg";
 export const externalLinks = {
   github: "https://github.com/jillo-abdullahi",
   linkedIn: "https://www.linkedin.com/in/jilloabdullahi/",
-  twitter: "https://x.com/jillo_woche",
+  twitter: "https://x.com/shrewd_turtle",
   facebook: "https://www.facebook.com/jilloabdullah/",
   stackoverflow: "https://stackoverflow.com/users/7300926/jillo-abdullahi",
   repositories: "https://github.com/jillo-abdullahi?tab=repositories",

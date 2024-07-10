@@ -105,13 +105,6 @@ export default function NavBar() {
                 </div>
               </div>
             </div>
-            {
-              <div
-                className={`absolute right-0 -bottom-12 hidden md:flex items-center justify-center space-y-0 w-56 bg-[#353D45]/80 border border-gray-900 p-2 rounded-xl`}
-              >
-                <Timer />
-              </div>
-            }
           </div>
           <Transition
             enter="duration-300 ease-out"

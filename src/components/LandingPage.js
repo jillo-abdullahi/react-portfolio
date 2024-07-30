@@ -56,14 +56,14 @@ const LandingPage = () => {
             </div>
           </div>
 
-          <div className="rounded-full bg-[#353D45] border border-gray-800 mt-3 fadeIn">
+          <div className="rounded-full bg-[#353D45] border border-gray-800 mt-3 fadeIn shadowy">
             <ContactLinks />
           </div>
         </div>
       </header>
 
       {/* About me section  */}
-      <section id="about" className="bg-[#353D45]">
+      <section id="about" className="bg-[#272F37]">
         <div className="mb-6 mt-20">
           <SectionHeading heading={"About"} subHeading={"me"} id="about" />
         </div>
@@ -114,7 +114,7 @@ const LandingPage = () => {
       </section>
 
       {/* projects section  */}
-      <section id="projects" className="bg-[#353D45] pb-12">
+      <section id="projects" className="bg-[#272F37] pb-12">
         <div className="pt-20">
           <div className="mb-6">
             <SectionHeading

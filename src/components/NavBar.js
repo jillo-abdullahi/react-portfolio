@@ -44,7 +44,7 @@ export default function NavBar() {
   return (
     <Disclosure
       as="nav"
-      className={`bg-[#272F37] border border-gray-900 rounded-xl mx-6 z-50 fixed right-0 lg:right-10 left-0 lg:left-10 h-16 slideInFromTop transition-all duration-200 ${
+      className={`bg-[#272F37] border border-gray-900 rounded-xl mx-6 z-50 fixed right-0 lg:right-10 left-0 lg:left-10 h-16 slideInFromTop transition-all duration-200 shadowy ${
         scrollOffset > 0 ? "mt-2" : "mt-4"
       }`}
     >

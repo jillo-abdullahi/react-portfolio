@@ -49,7 +49,7 @@ const ContactLinks = ({ isInFooter }) => {
   const FooterLinkBox = ({ icon, href, name }) => {
     return (
       <a
-        className="w-full sm:w-64 rounded-lg border border-gray-900 bg-[#272F3790] hover:bg-[#272F37] flex items-center justify-between group cursor-pointer p-2 transition duration-300"
+        className="w-full sm:w-64 rounded-lg border border-gray-900 bg-[#272F3790] hover:bg-[#272F37] flex items-center justify-between group cursor-pointer p-2 transition duration-300 shadowy"
         href={href}
         target="_blank"
       >

@@ -101,7 +101,7 @@ const LandingPage = () => {
       {/* Stacks section  */}
       <section id="stacks" className="pb-12">
         <div className="mb-6 mt-20">
-          <SectionHeading heading={"My"} subHeading={"tech stack"} id="stack" />
+          <SectionHeading heading={"My"} subHeading={"tools of trade"} id="stack" />
         </div>
         <SlideMeIn>
           <div className="description w-full max-w-4xl pb-2">

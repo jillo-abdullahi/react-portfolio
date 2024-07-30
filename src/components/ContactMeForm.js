@@ -42,17 +42,12 @@ export default function ContactMeForm() {
     e.preventDefault();
     setLoading(true);
 
-    // TODO: moving these to .env once domain has been migrated to Vercel
-    const REACT_APP_SERVICE_ID = "service_kxmk5lw";
-    const REACT_APP_TEMPLATE_ID = "template_w1b9obl";
-    const REACT_APP_PUBLIC_KEY = "user_asn4biZeLW7gkYQlbZLk9";
-
     emailjs
       .send(
-        REACT_APP_SERVICE_ID,
-        REACT_APP_TEMPLATE_ID,
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
         formData,
-        REACT_APP_PUBLIC_KEY
+        process.env.REACT_APP_PUBLIC_KEY
       )
       .then(
         () => {

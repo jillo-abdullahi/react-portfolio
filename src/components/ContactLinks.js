@@ -5,7 +5,6 @@ import {
   faGithub,
   faXTwitter,
   faStackOverflow,
-  faFacebook,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import { externalLinks } from "../portfolioData";
@@ -13,7 +12,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { SlideMeIn } from "./shared/slideMeIn";
 
 const ContactLinks = ({ isInFooter }) => {
-  const { linkedIn, github, twitter, facebook, stackoverflow, instagram } =
+  const { linkedIn, github, twitter, stackoverflow, instagram } =
     externalLinks;
 
   const socialLinks = [
@@ -29,14 +28,14 @@ const ContactLinks = ({ isInFooter }) => {
       name: "Stackoverflow",
     },
     {
-      icon: faFacebook,
-      href: facebook,
-      name: "Facebook",
+      icon: faGithub,
+      href: github,
+      name: "Github",
     },
     {
-      icon: faInstagram,
-      href: instagram,
-      name: "Instagram",
+      icon: faXTwitter,
+      href: twitter,
+      name: "Twitter(X)",
     },
     {
       icon: faLinkedin,
@@ -51,7 +50,7 @@ const ContactLinks = ({ isInFooter }) => {
       <a
         className="w-full sm:w-64 rounded-lg border border-gray-900 bg-[#272F3790] hover:bg-[#272F37] flex items-center justify-between group cursor-pointer p-2 transition duration-300 shadowy"
         href={href}
-        target="_blank"
+        target="_blank" rel="noreferrer"
       >
         <div className="flex items-center justify-start space-x-2">
           <div className="rounded-md bg-gray-700/50 border-gray-700 border p-2 w-10 h-10 flex items-center justify-center">

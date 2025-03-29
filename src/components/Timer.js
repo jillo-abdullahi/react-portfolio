@@ -6,29 +6,31 @@ import { formatInTimeZone } from "date-fns-tz";
  * @returns
  */
 const Timer = () => {
-  const [currentTime, setCurrentTime] = useState("");
+	const [currentTime, setCurrentTime] = useState("");
 
-  useEffect(() => {
-    const timeZone = "Africa/Nairobi"; // EAT time zone
-    const updateCurrentTime = () => {
-      const currentTime = formatInTimeZone(new Date(), timeZone, "HH:mm:ss");
-      setCurrentTime(currentTime);
-    };
+	useEffect(() => {
+		const timeZone = "Africa/Nairobi"; // EAT time zone
+		const updateCurrentTime = () => {
+			const currentTime = formatInTimeZone(new Date(), timeZone, "HH:mm:ss");
+			setCurrentTime(currentTime);
+		};
 
-    const timerId = setInterval(updateCurrentTime, 1000);
-    updateCurrentTime(); // initial call to set time immediately
+		const timerId = setInterval(updateCurrentTime, 1000);
+		updateCurrentTime(); // initial call to set time immediately
 
-    return () => clearInterval(timerId); // cleanup on component unmount
-  }, []);
+		return () => clearInterval(timerId); // cleanup on component unmount
+	}, []);
 
-  return (
-    <div className="flex items-center justify-center space-x-2 text-white">
-      <p className="text-sm text-gray-300 font-medium">Local Time (EAT)</p>
-      <p className="text-sm font-semibold text-orange/90 w-[4.5rem] flex items-center justify-center">
-        <span>{currentTime}</span>
-      </p>
-    </div>
-  );
+	return (
+		<div className="flex items-center justify-center space-x-2 text-white">
+			<p className="text-sm md:text-base text-gray-300 font-medium">
+				Local Time (EAT)
+			</p>
+			<p className="text-sm md:text-base font-semibold text-orange/90 w-[4.5rem] flex items-center justify-center">
+				<span>{currentTime}</span>
+			</p>
+		</div>
+	);
 };
 
 export default Timer;

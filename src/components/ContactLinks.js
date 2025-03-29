@@ -5,7 +5,6 @@ import {
   faGithub,
   faXTwitter,
   faStackOverflow,
-  faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import { externalLinks } from "../portfolioData";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";

@@ -36,7 +36,7 @@ export const ProjectCard = ({ project }) => {
           </ul>
 
           <div className="flex items-center mt-[10px] text-slate-600 dark:text-slate-lightest externals">
-            <ButtonGroup link1={preview} link2={github} />
+            <ButtonGroup previewLink={preview} sourceCodeLink={github} />
           </div>
         </div>
       </div>

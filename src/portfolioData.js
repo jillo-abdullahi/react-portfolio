@@ -1,6 +1,7 @@
 import memoryGame from "./static/images/portfolio/memory.png";
 import dictionaryGame from "./static/images/portfolio/dictionary.png";
 import rockPaperScissors from "./static/images/portfolio/rockPaperScissors.png";
+import gasHawkWebApp from "./static/images/portfolio/gashawk.png";
 import homestead from "./static/images/portfolio/homestead.png";
 import tstkpresale from "./static/images/portfolio/tstkpresale.png";
 import devlinks from "./static/images/portfolio/devlinks.png";
@@ -149,6 +150,15 @@ export const experiences = [
 
 export const portfolioProjects = [
   {
+    title: "Web app for managing GasHawk transactions",
+    description:
+      "GasHawk is saving retails and institutions up to 95% on gas fees on Ethereum, Optimism, and Base. Connect your wallet to the GasHawk RPC and manage your transactions from here.",
+    image: gasHawkWebApp,
+    preview: "https://app.gashawk.io/",
+    stacks: ["React", "Vite", "Chakra UI", "TypeScript"],
+    completed: true,
+  },
+  {
     title: "A link sharing app for developers",
     description:
       "A fully-functional link-sharing app for developers. You can now consolidate and share your links to different platforms with just one URL.",
@@ -156,16 +166,6 @@ export const portfolioProjects = [
     preview: "https://my-links-amber.vercel.app/",
     github: "https://github.com/jillo-abdullahi/my-links",
     stacks: ["Nest.js", "Vue.js", "TailwindCSS", "TypeScript", "Postgres"],
-    completed: true,
-  },
-  {
-    title: "An ERC-20 token pre-sale dApp",
-    description:
-      "A dApp that allows users to participate in an ERC-20 token pre-sale using the Polygon Mumbai chain.",
-    image: tstkpresale,
-    preview: "https://tstk-beincrypto.vercel.app/",
-    github: "https://github.com/jillo-abdullahi/tstk-beincrypto",
-    stacks: ["Mantine UI", "TypeScript", "Connect-kit", "Wagmi"],
     completed: true,
   },
   {

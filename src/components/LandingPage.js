@@ -101,7 +101,11 @@ const LandingPage = () => {
       {/* Stacks section  */}
       <section id="stacks" className="pb-12">
         <div className="mb-6 mt-20">
-          <SectionHeading heading={"My"} subHeading={"tools of trade"} id="stack" />
+          <SectionHeading
+            heading={"My"}
+            subHeading={"tools of trade"}
+            id="stack"
+          />
         </div>
         <SlideMeIn>
           <div className="description w-full max-w-4xl pb-2">
@@ -127,16 +131,15 @@ const LandingPage = () => {
             <SlideMeIn>
               <div className="description w-full max-w-4xl">
                 <p className="text-base text-gray-200 text-center px-5">
-                  Here are some of my projects. For a full list, please check
-                  out my{" "}
+                  A sneak peek at my latest creations. Craving more? My{" "}
                   <a
                     href={externalLinks.repositories}
                     className="text-orange hover:underline"
                     target="_blank"
                   >
-                    Github
+                    Github profile's
                   </a>{" "}
-                  profile.
+                  got the goods!
                 </p>
               </div>
             </SlideMeIn>

@@ -22,7 +22,7 @@ export default function ContactMeForm() {
       title: success ? "Your message was sent." : "Your message was not sent.",
       description: success
         ? "I'll be sure to get back to you ASAP!"
-        : `${errorText}. Please try again or send me an email directly.`,
+        : `Something went wrong! Please give it another try, or feel free to email me directly.`,
       status: success ? "success" : "error",
       duration: 5000,
       isClosable: true,

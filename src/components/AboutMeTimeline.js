@@ -20,8 +20,8 @@ export const AboutMeTimeline = () => {
         ) => (
           <SlideMeIn cascade={true} key={index}>
             <div
-              className={`border bg-[#272f3790] text-white rounded-xl py-5 px-6 shadowy ${
-                isCurrent ? "border-orange" : "border-gray-900"
+              className={`border bg-[#272f3790] text-white rounded-2xl py-5 px-6 shadowy ${
+                isCurrent ? "border-orange/50" : "border-gray-900"
               }`}
             >
               <div className="timeLineContent text-left space-y-3">

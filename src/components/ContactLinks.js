@@ -12,8 +12,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { SlideMeIn } from "./shared/slideMeIn";
 
 const ContactLinks = ({ isInFooter }) => {
-  const { linkedIn, github, twitter, stackoverflow, instagram } =
-    externalLinks;
+  const { linkedIn, github, twitter, stackoverflow, instagram } = externalLinks;
 
   const socialLinks = [
     { icon: faGithub, href: github },
@@ -48,9 +47,10 @@ const ContactLinks = ({ isInFooter }) => {
   const FooterLinkBox = ({ icon, href, name }) => {
     return (
       <a
-        className="w-full sm:w-64 rounded-lg border border-gray-900 bg-[#272F3790] hover:bg-[#272F37] flex items-center justify-between group cursor-pointer p-2 transition duration-300 shadowy"
+        className="w-full sm:w-64 rounded-xl border border-gray-900 bg-[#272F3790] hover:bg-[#272F37] flex items-center justify-between group cursor-pointer p-2 transition duration-300 shadowy"
         href={href}
-        target="_blank" rel="noreferrer"
+        target="_blank"
+        rel="noreferrer"
       >
         <div className="flex items-center justify-start space-x-2">
           <div className="rounded-md bg-gray-700/50 border-gray-700 border p-2 w-10 h-10 flex items-center justify-center">
@@ -75,7 +75,7 @@ const ContactLinks = ({ isInFooter }) => {
       {footerSocialLinks.map(({ icon, href, name }, index) => {
         return (
           <SlideMeIn key={index}>
-            <FooterLinkBox icon={icon} href={href}  name={name} />
+            <FooterLinkBox icon={icon} href={href} name={name} />
           </SlideMeIn>
         );
       })}
@@ -83,7 +83,7 @@ const ContactLinks = ({ isInFooter }) => {
   );
 
   const headerLinks = (
-    <div className="flex items-center justify-center space-x-3 px-3 py-2">
+    <div className="flex items-center justify-center space-x-3 py-1">
       {socialLinks.map(({ icon, href }, index) => (
         <a
           className="text-gray-300 hover:text-orange transition-all duration-150 flex"
@@ -92,7 +92,7 @@ const ContactLinks = ({ isInFooter }) => {
           rel="noopener noreferrer"
           key={index}
         >
-          <FontAwesomeIcon icon={icon} style={{ fontSize: "26px" }} />
+          <FontAwesomeIcon icon={icon} style={{ fontSize: "18px" }} />
         </a>
       ))}
     </div>

@@ -18,14 +18,14 @@ export const ProjectCard = ({ project }) => {
           )}
 
           <div className="title flex">
-            <h3 className="mb-5 text-orange text-xl font-semibold externals w-fit">
+            <h3 className="mb-5 text-orange text-lg font-medium externals w-fit">
               <a href={preview} target="_blank ">
                 {title}
               </a>
             </h3>
           </div>
 
-          <div className="text-gray-200 p-[25px] border border-gray-900 rounded-xl bg-[#272F3790] shadowy">
+          <div className="text-gray-200 p-[25px] border border-gray-900 rounded-2xl bg-[#272F3790] shadowy">
             <p>{description}</p>
           </div>
 
@@ -45,7 +45,7 @@ export const ProjectCard = ({ project }) => {
           <img
             src={image}
             alt=""
-            className="w-full object-cover rounded-xl"
+            className="w-full object-cover rounded-2xl"
           />
         </a>
       </div>

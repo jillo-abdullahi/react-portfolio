@@ -1,6 +1,4 @@
-import React from "react";
 import {
-  AcademicCapIcon,
   FaceSmileIcon,
   CalendarDaysIcon,
   EnvelopeIcon,
@@ -26,72 +24,79 @@ const LandingPage = () => {
         <div className="h-[10%] w-full max-w-7xl">
           <NavBar />
         </div>
-        <div className="h-[90%] flex flex-col items-center justify-center relative w-full max-w-7xl">
-          <div className="flex flex-col space-y-8 items-center header-title">
-            <div className="rounded-full bg-transparent border-8 border-[#E7A11A78]">
+        <div className="flex flex-col items-center justify-center relative w-full max-w-7xl mt-24 md:mt-48 px-4 md:px-0">
+          <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 items-center header-title justify-center rounded-3xl border border-gray-900 bg-[#272f3790] p-4 md:p-10 w-full md:w-[82vw]">
+            <div className="rounded-full bg-transparent border-8 border-[#E7A11A78] flex-shrink-0 md:mr-8">
               <div className="profile-img">
-                <img src={ProfileImage} alt="profile" />
+                <img
+                  src={ProfileImage}
+                  alt="profile"
+                  className="flex-shrink-0 w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden shadow-lg"
+                />
               </div>
             </div>
 
-            <div className="flex flex-col items-center space-y-2 content justify-center">
-              <div className="flex items-center space-x-1">
+            <div className="flex flex-col items-start content justify-start border-0 md:border-l border-gray-900 pl-0 md:pl-8">
+              <div className="flex items-center space-x-1 w-full justify-center md:justify-start">
                 <WavingHand />
-                <span className="text-2xl text-gray-300 font-medium">
+                <span className="text-xl text-gray-300 font-medium flex-shrink-0">
                   Hello, I am
                 </span>
               </div>
 
-              <span className="text-4xl text-orange font-semibold">
-                Jillo Woche
-              </span>
-              <hr className="bg-orange border border-orange w-56" />
-              <span className="font-medium pt-2 text-xl text-gray-300">
+              <div className="flex flex-col md:flex-row md:items-baseline justify-center space-x-3 pt-2 w-full">
+                <span className="text-4xl text-orange font-bold flex-shrink-0">
+                  Jillo Woche
+                </span>
+                <div className="hidden md:flex items-center justify-center md:justify-start space-x-1 w-fit-content md:w-full">
+                  <ContactLinks />
+                </div>
+              </div>
+              <span className="font-normal pt-1 text-xl text-gray-300 w-full text-center md:text-left">
                 Full Stack Software Engineer
               </span>
-              <div className="flex items-center justify-center space-x-1">
+              <div className="description w-full max-w-3xl pt-3">
+                <p className="text-base text-gray-200 text-center md:text-left">
+                  As a Full Stack Software Engineer, I'm on a mission to build
+                  amazing things – with a dash of innovation and a whole lot of
+                  precision! From pixel-perfect front-ends to rock-solid
+                  back-ends. I genuinely enjoy transforming intricate problems
+                  into streamlined, impactful solutions within the dynamic web2
+                  and web3 realms.
+                </p>
+              </div>
+
+              <div className="flex items-center justify-center md:justify-start space-x-1 pt-4 w-full">
                 <MapPinIcon className="text-orange h-4 w-4" />{" "}
                 <span className="text-sm text-gray-300">Nairobi, Kenya</span>
               </div>
+              <div className="flex items-center justify-center space-x-1 w-full pt-2 md:hidden">
+                <ContactLinks />
+              </div>
             </div>
-          </div>
-
-          <div className="rounded-full bg-[#353D45] border border-gray-800 mt-3 fadeIn shadowy">
-            <ContactLinks />
           </div>
         </div>
       </header>
 
       {/* About me section  */}
-      <section id="about" className="bg-[#272F37]">
-        <div className="mb-6 mt-20">
-          <SectionHeading heading={"About"} subHeading={"me"} id="about" />
+      <section id="about" className="bg-[#272F37] px-4 withBubblesBackground">
+        <div className="mb-1 mt-20">
+          <SectionHeading
+            heading={"Education and work experience"}
+            id="education"
+          />
         </div>
+        <SlideMeIn>
+          <div className="description w-full max-w-4xl pb-2">
+            <p className="text-base text-gray-300 text-center">
+              Navigating my journey through academia and the professional world.
+            </p>
+          </div>
+        </SlideMeIn>
 
-        <div className="content">
+        <div className="content pt-6">
           <div className="flex flex-col space-y-10 items-center w-full">
-            <SlideMeIn direction="up" triggerOnce>
-              <div className="description w-full max-w-4xl">
-                <p className="text-base text-gray-200">
-                  Innovative Full Stack Software Engineer with a keen eye for
-                  detail and a commitment to continuous learning. Armed with a
-                  solid foundation in both front-end and back-end development, I
-                  thrive on tackling complex challenges and delivering elegant
-                  solutions within the web2 and web3 space.
-                </p>
-              </div>
-            </SlideMeIn>
-
-            <div className="flex flex-col space-y-2 pb-12">
-              <SlideMeIn direction="up" triggerOnce>
-                <div className="flex items-center justify-center space-x-2 mb-3">
-                  <AcademicCapIcon className="w-6 h-6 text-orange" />
-                  <h3 className="text-orange text-lg font-normal">
-                    Education and work experience
-                  </h3>
-                </div>
-              </SlideMeIn>
-
+            <div className="flex flex-col space-y-2">
               <AboutMeTimeline />
             </div>
           </div>
@@ -99,8 +104,8 @@ const LandingPage = () => {
       </section>
 
       {/* Stacks section  */}
-      <section id="stacks" className="pb-12">
-        <div className="mb-6 mt-20">
+      <section id="stacks">
+        <div className="mb-1 mt-20">
           <SectionHeading
             heading={"My"}
             subHeading={"tools of trade"}
@@ -109,7 +114,7 @@ const LandingPage = () => {
         </div>
         <SlideMeIn>
           <div className="description w-full max-w-4xl pb-2">
-            <p className="text-base text-gray-200 text-center">
+            <p className="text-base text-gray-300 text-center">
               I work hard to improve my skills regularly.
             </p>
           </div>
@@ -118,9 +123,9 @@ const LandingPage = () => {
       </section>
 
       {/* projects section  */}
-      <section id="projects" className="bg-[#272F37] pb-12">
+      <section id="projects" className="withBubblesBackground">
         <div className="pt-20">
-          <div className="mb-6">
+          <div className="mb-1">
             <SectionHeading
               heading={"Featured"}
               subHeading={"projects"}
@@ -130,7 +135,7 @@ const LandingPage = () => {
           <div className="w-full flex items-center justify-center">
             <SlideMeIn>
               <div className="description w-full max-w-4xl">
-                <p className="text-base text-gray-200 text-center px-5">
+                <p className="text-base text-gray-300 text-center px-5">
                   A sneak peek at my latest creations. Craving more? My{" "}
                   <a
                     href={externalLinks.repositories}
@@ -158,7 +163,7 @@ const LandingPage = () => {
       </section>
 
       {/* contact section  */}
-      <section id="contact" className="contact pb-10 withBubblesBackground">
+      <section id="contact" className="contact pb-8 withBubblesBackground">
         <div className="pt-20">
           <div className="mb-2">
             <SectionHeading

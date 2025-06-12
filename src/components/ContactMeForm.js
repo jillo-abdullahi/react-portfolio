@@ -77,7 +77,7 @@ export default function ContactMeForm() {
                 placeholder="Name"
                 required
                 autoComplete="given-name"
-                className="block w-full rounded-md border-0 bg-white/5 py-3 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-orange/90 font-medium sm:text-sm sm:leading-6"
+                className="block w-full rounded-lg border-0 bg-white/5 py-3 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-orange/90 font-medium sm:text-sm sm:leading-6"
               />
             </div>
 
@@ -91,7 +91,7 @@ export default function ContactMeForm() {
                 onChange={handleChange}
                 required
                 autoComplete="email"
-                className="block w-full rounded-md border-0 bg-white/5 py-3 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-orange/90 font-medium sm:text-sm sm:leading-6"
+                className="block w-full rounded-lg border-0 bg-white/5 py-3 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-orange/90 font-medium sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -105,14 +105,14 @@ export default function ContactMeForm() {
               required
               rows={5}
               placeholder="Your message"
-              className="block w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-orange/90 font-medium sm:text-sm sm:leading-6"
+              className="block w-full rounded-lg border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-orange/90 font-medium sm:text-sm sm:leading-6"
             />
           </div>
 
           <div className="mt-6 flex items-center justify-end gap-x-6">
             <button
               type="submit"
-              className={`rounded-md px-3 py-3 text-base font-semibold shadow-sm flex items-center justify-center space-x-2 w-full mt-0.5 transition duration-200 group ${
+              className={`rounded-lg px-3 py-3 text-base font-semibold shadow-sm flex items-center justify-center space-x-2 w-full mt-0.5 transition duration-200 group ${
                 loading
                   ? "cursor-not-allowed bg-orange/90 hover:bg-orange/90"
                   : "hover:bg-orange/90 focus-visible:outline text-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange/90 bg-orange"

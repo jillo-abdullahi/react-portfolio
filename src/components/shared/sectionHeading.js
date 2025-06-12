@@ -4,6 +4,7 @@ import {
   Square3Stack3DIcon,
   RocketLaunchIcon,
   ChatBubbleBottomCenterTextIcon,
+  AcademicCapIcon
 } from "@heroicons/react/24/outline";
 import { SlideMeIn } from "./slideMeIn";
 
@@ -19,8 +20,10 @@ export const SectionHeading = ({ heading, subHeading, id }) => {
           <Square3Stack3DIcon className="w-6 h-6 text-orange" />
         ) : id === "projects" ? (
           <RocketLaunchIcon className="w-6 h-6 text-orange" />
+        ) : id === "education" ? (
+          <AcademicCapIcon className="w-6 h-6 text-orange" />
         ) : null}
-        <h2 className="font-semibold text-2xl text-gray-200">
+        <h2 className="font-semibold text-lg md:text-2xl text-gray-200">
           {heading} {subHeading}
         </h2>
       </div>

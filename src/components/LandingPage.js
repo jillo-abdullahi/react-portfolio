@@ -36,7 +36,7 @@ const LandingPage = () => {
               </div>
             </div>
 
-            <div className="flex flex-col items-start content justify-start border-0 md:border-l border-gray-900 pl-0 md:pl-8">
+            <div className="flex flex-col items-start content justify-start border-t md:border-l md:border-t-0 border-gray-900 pl-0 md:pl-8 pt-4 md:pt-0">
               <div className="flex items-center space-x-1 w-full justify-center md:justify-start">
                 <WavingHand />
                 <span className="text-xl text-gray-300 font-medium flex-shrink-0">
@@ -56,7 +56,7 @@ const LandingPage = () => {
                 Full Stack Software Engineer
               </span>
               <div className="description w-full max-w-3xl pt-3">
-                <p className="text-base text-gray-200 text-center md:text-left">
+                <p className="text-gray-200 text-center md:text-left">
                   As a Full Stack Software Engineer, I'm on a mission to build
                   amazing things – with a dash of innovation and a whole lot of
                   precision! From pixel-perfect front-ends to rock-solid
@@ -79,7 +79,7 @@ const LandingPage = () => {
       </header>
 
       {/* About me section  */}
-      <section id="about" className="bg-[#272F37] px-4 withBubblesBackground">
+      <section id="about" className="px-4 bg-[#272F37]">
         <div className="mb-1 mt-20">
           <SectionHeading
             heading={"Education and work experience"}
@@ -94,7 +94,7 @@ const LandingPage = () => {
           </div>
         </SlideMeIn>
 
-        <div className="content pt-6">
+        <div className="content pt-6 border-0">
           <div className="flex flex-col space-y-10 items-center w-full">
             <div className="flex flex-col space-y-2">
               <AboutMeTimeline />
@@ -104,7 +104,7 @@ const LandingPage = () => {
       </section>
 
       {/* Stacks section  */}
-      <section id="stacks">
+      <section id="stacks" className="border-0">
         <div className="mb-1 mt-20">
           <SectionHeading
             heading={"My"}

@@ -6,7 +6,6 @@ import {
 } from "@headlessui/react";
 import {
   Bars3Icon,
-  HomeIcon,
   XMarkIcon,
   CalendarDaysIcon,
 } from "@heroicons/react/24/outline";
@@ -14,6 +13,7 @@ import { useState, useEffect } from "react";
 import WorkAvailabilityIndicator from "./WorkAvailabilityIndicator";
 import { externalLinks } from "../portfolioData";
 import Timer from "./Timer";
+import SneakerHead from "../static/images/sneakerhead985.png";
 
 const navigation = [
   { name: "Experience", href: "#about" },
@@ -69,8 +69,12 @@ export default function NavBar() {
                   className="flex flex-shrink-0 items-center cursor-pointer"
                   href="#home"
                 >
-                  <button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-transparent">
-                    <HomeIcon className="block h-7 w-7" />
+                  <button className="relative inline-flex items-center justify-center rounded-full p-1 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-transparent">
+                    <img
+                      src={SneakerHead}
+                      alt="home"
+                      className="flex-shrink-0 w-8 h-8 rounded-full overflow-hidden shadow-lg cursor-pointer"
+                    />
                   </button>
                 </a>
                 <div className="hidden lg:ml-6 lg:flex lg:items-center lg:space-x-4">

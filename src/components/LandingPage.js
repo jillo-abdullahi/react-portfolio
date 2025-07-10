@@ -25,7 +25,7 @@ const LandingPage = () => {
           <NavBar />
         </div>
         <div className="flex flex-col items-center justify-center relative w-full max-w-7xl mt-24 md:mt-48 px-4 md:px-0">
-          <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 items-center header-title justify-center rounded-3xl border border-gray-900 bg-[#272f3790] p-4 md:p-10 w-full md:w-[82vw]">
+          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 items-center header-title justify-center rounded-3xl border border-gray-900 bg-[#272f3790] p-4 pt-8 md:p-10 w-full md:w-[82vw]">
             <div className="rounded-full bg-transparent border-8 border-[#E7A11A78] flex-shrink-0 md:mr-8">
               <div className="profile-img">
                 <img
@@ -36,7 +36,7 @@ const LandingPage = () => {
               </div>
             </div>
 
-            <div className="flex flex-col items-start content justify-start border-t md:border-l md:border-t-0 border-gray-900 pl-0 md:pl-8 pt-4 md:pt-0">
+            <div className="flex flex-col items-start content justify-start border-0 md:border-l md:border-t-0 border-gray-900 pl-0 md:pl-8 pt-4 md:pt-0">
               <div className="flex items-center space-x-1 w-full justify-center md:justify-start">
                 <WavingHand />
                 <span className="text-xl text-gray-300 font-medium flex-shrink-0">
